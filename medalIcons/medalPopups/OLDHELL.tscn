@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://c7hjuva86ewpe"]
+
+[ext_resource type="PackedScene" uid="uid://dqjmxyn1jtexc" path="res://medalIcons/achievementGet.tscn" id="1_mrjgi"]
+
+[node name="AchievementGet" unique_id=1709264143 instance=ExtResource("1_mrjgi")]
+medalDisplayName = "Old Hell"
+medalIconPath = "res://medalIcons/oldhell.jpg"

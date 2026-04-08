@@ -1,0 +1,45 @@
+[gd_scene load_steps=3 format=3 uid="uid://xk7ex2rmkfyn"]
+
+[ext_resource type="PackedScene" uid="uid://b2hda5a8x0e73" path="res://menus/blackoverlay_fade.tscn" id="1_n4y68"]
+[ext_resource type="FontFile" uid="uid://bwyjm1irjlrub" path="res://Test Handwritten.otf" id="2_udfpk"]
+
+[node name="loadingScreen" type="CanvasLayer"]
+layer = 128
+
+[node name="blackoverlay_fade" parent="." groups=["blackOverlay"] instance=ExtResource("1_n4y68")]
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="loadingScreenElements" type="Node2D" parent="."]
+
+[node name="loadingtext2" type="RichTextLabel" parent="loadingScreenElements"]
+offset_left = 234.0
+offset_top = 212.0
+offset_right = 1079.0
+offset_bottom = 346.0
+theme_override_colors/font_shadow_color = Color(0.45098, 0.407843, 0.866667, 1)
+theme_override_constants/shadow_offset_y = 5
+theme_override_constants/shadow_outline_size = 10
+theme_override_fonts/normal_font = ExtResource("2_udfpk")
+theme_override_font_sizes/normal_font_size = 100
+text = "LOADING!!!!!!!!"
+metadata/_edit_use_anchors_ = true
+
+[node name="loadingtext" type="RichTextLabel" parent="loadingScreenElements"]
+offset_left = 72.0
+offset_top = 610.0
+offset_right = 1224.0
+offset_bottom = 674.0
+theme_override_colors/font_shadow_color = Color(0.45098, 0.407843, 0.866667, 1)
+theme_override_fonts/normal_font = ExtResource("2_udfpk")
+text = "NOTE:   THE 	GAME   	MAY   TAKE   UP   TO   A   MINUTE   TO   START.   
+BE   PATIENT!      LOOK   OUT   THE   WINDOW!    ADJUST   YOUR   POSTURE!   TAKE    DEEP   BREATHS!   BLOW   YOUR   NOSE!   STRETCH   YOUR   LEGS!   PLAY   DRUMS   ON   YOUR   THIGHS!   DRAW   ON   A   STICKY   NOTE!   IT   SHOULD   BE   DONE   NOW!"
+metadata/_edit_use_anchors_ = true
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="loadingScreenElements"]
+offset_left = 388.0
+offset_top = 438.0
+offset_right = 900.0
+offset_bottom = 566.0
+
+[connection signal="timeout" from="Timer" to="blackoverlay_fade" method="_on_timer_timeout"]

@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://bg0fim4vlkhsu"]
+
+[ext_resource type="PackedScene" uid="uid://dqjmxyn1jtexc" path="res://medalIcons/achievementGet.tscn" id="1_imss8"]
+
+[node name="AchievementGet" unique_id=1709264143 instance=ExtResource("1_imss8")]
+medalDisplayName = "True Fan"
+medalIconPath = "res://medalIcons/CREDITS.JPG"

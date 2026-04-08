@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://cwoj3i6clvokm"]
+
+[ext_resource type="PackedScene" uid="uid://dqjmxyn1jtexc" path="res://medalIcons/achievementGet.tscn" id="1_5b4wv"]
+
+[node name="AchievementGet" unique_id=1709264143 instance=ExtResource("1_5b4wv")]
+medalDisplayName = "Max Cayne"
+medalIconPath = "res://medalIcons/maxpayne.JPG"

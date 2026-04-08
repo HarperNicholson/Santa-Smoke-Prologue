@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://ddj02kfo7lwjg"]
+
+[node name="finesnow_timer" type="Timer"]
+wait_time = 51.0
+autostart = true

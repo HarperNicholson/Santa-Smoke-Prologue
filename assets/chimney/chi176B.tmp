@@ -1,0 +1,44 @@
+[gd_scene load_steps=6 format=3 uid="uid://bm1pvjfgh0lnk"]
+
+[ext_resource type="PackedScene" uid="uid://cn4x7h3shrtfh" path="res://assets/background/bg_northpole.tscn" id="1_83357"]
+[ext_resource type="Texture2D" uid="uid://bfv54ljerhnte" path="res://assets/chimney/assets/chimneyLevelTop.png" id="1_j1ub6"]
+[ext_resource type="PackedScene" uid="uid://diprsntkbwspk" path="res://menus/pause/pause_layer.tscn" id="1_mqsw8"]
+[ext_resource type="PackedScene" uid="uid://cw2u1rbovx1wo" path="res://assets/chimney/c_level_wall.tscn" id="2_6074b"]
+[ext_resource type="Script" path="res://assets/chimney/BrickSpawner.gd" id="3_gx13w"]
+
+[node name="ChimneyLevel" type="Node2D"]
+texture_filter = 1
+position = Vector2(640, 580)
+
+[node name="pauseLayer" parent="." instance=ExtResource("1_mqsw8")]
+
+[node name="BrickSpawner" type="Node2D" parent="."]
+script = ExtResource("3_gx13w")
+
+[node name="bg_northpole" parent="." instance=ExtResource("1_83357")]
+position = Vector2(-188, -176.18)
+scale = Vector2(0.433167, 0.433167)
+
+[node name="CLevelTop" type="StaticBody2D" parent="."]
+position = Vector2(0, 24.82)
+
+[node name="Sprite2D" type="Sprite2D" parent="CLevelTop"]
+texture = ExtResource("1_j1ub6")
+metadata/_edit_lock_ = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="CLevelTop"]
+position = Vector2(0, -44.7)
+polygon = PackedVector2Array(-57, -232, -56, -582, -641, -582, -640, 489, -551, 489, -552, -234)
+metadata/_edit_lock_ = true
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="CLevelTop"]
+position = Vector2(0, -44.7)
+polygon = PackedVector2Array(83, -230, 83, -578, 640, -576, 640, 440, 550, 440, 556, -231)
+metadata/_edit_lock_ = true
+
+[node name="CLevelWall" parent="." instance=ExtResource("2_6074b")]
+position = Vector2(0, 962.82)
+
+[node name="CLevelWall2" parent="." instance=ExtResource("2_6074b")]
+z_index = -1
+position = Vector2(0, 2292.82)

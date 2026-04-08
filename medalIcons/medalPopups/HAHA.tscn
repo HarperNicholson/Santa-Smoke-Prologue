@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://bqie1q26atbx3"]
+
+[ext_resource type="PackedScene" uid="uid://dqjmxyn1jtexc" path="res://medalIcons/achievementGet.tscn" id="1_w5kym"]
+
+[node name="AchievementGet" unique_id=1709264143 instance=ExtResource("1_w5kym")]
+medalDisplayName = "Haha"
+medalIconPath = "res://medalIcons/haha.png"

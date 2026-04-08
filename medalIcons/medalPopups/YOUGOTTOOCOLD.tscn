@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://dx8mfugmwotk1"]
+
+[ext_resource type="PackedScene" uid="uid://dqjmxyn1jtexc" path="res://medalIcons/achievementGet.tscn" id="1_asw61"]
+
+[node name="AchievementGet" unique_id=1709264143 instance=ExtResource("1_asw61")]
+medalDisplayName = "You Got Too Cold"
+medalIconPath = "res://medalIcons/you got too cold.JPG"

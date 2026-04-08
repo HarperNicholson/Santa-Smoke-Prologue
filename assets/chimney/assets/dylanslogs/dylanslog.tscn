@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://15jnopcj0uo8"]
+
+[ext_resource type="Script" uid="uid://2avm026ymbdb" path="res://assets/chimney/assets/dylanslogs/cull.gd" id="1_wm1ea"]
+[ext_resource type="Texture2D" uid="uid://dbdnaxqw4cusk" path="res://assets/chimney/assets/dylanslogs/sprites_dylanslog/dylanslog1.png" id="2_igcqs"]
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_od71n"]
+polygon = PackedVector2Array(-97, 25, -97, -24, 94, -23, 94, 27)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m8wx2"]
+size = Vector2(177, 51)
+
+[node name="Dylanslog" type="StaticBody2D"]
+position = Vector2(103, 24)
+script = ExtResource("1_wm1ea")
+metadata/_edit_group_ = true
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="."]
+occluder = SubResource("OccluderPolygon2D_od71n")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_igcqs")
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-2.5, 1.5)
+shape = SubResource("RectangleShape2D_m8wx2")
+metadata/_edit_lock_ = true

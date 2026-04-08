@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://ukats6qyrh1l"]
+
+[ext_resource type="Script" uid="uid://dtqq20oybwmss" path="res://assets/platforms/snow/sp1picker.gd" id="1_qgf3b"]
+
+[node name="snow_platform_1" type="Node2D" groups=["cullable"]]
+script = ExtResource("1_qgf3b")
+metadata/_edit_group_ = true

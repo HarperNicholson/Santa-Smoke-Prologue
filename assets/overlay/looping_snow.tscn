@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://chj6b67cq81fv"]
+
+[ext_resource type="Script" uid="uid://b0tiqusfmk6fp" path="res://assets/overlay/looping_snow.gd" id="1_crnvv"]
+
+[node name="looping_snow" type="Node2D"]
+script = ExtResource("1_crnvv")

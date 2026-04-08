@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://bris8l50n83mm"]
+
+[ext_resource type="Texture2D" uid="uid://bac8y0jtjw6lt" path="res://assets/sprites_platforms/newtrace/b4.png" id="1_h4j86"]
+[ext_resource type="Texture2D" uid="uid://cnmnrpp63wy8h" path="res://assets/sprites_platforms/newtrace/f4.png" id="2_olbx3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_56vou"]
+size = Vector2(62.7926, 3.95297)
+
+[node name="snow_platform_4" type="StaticBody2D" unique_id=2094331570 groups=["cullable"]]
+position = Vector2(160, -40)
+scale = Vector2(0.16, 0.16)
+metadata/_edit_group_ = true
+
+[node name="back" type="Sprite2D" parent="." unique_id=2105635340]
+position = Vector2(0, 112.295)
+scale = Vector2(2, 2)
+texture = ExtResource("1_h4j86")
+
+[node name="front" type="Sprite2D" parent="." unique_id=820192202]
+z_index = 2
+position = Vector2(0, 109.895)
+scale = Vector2(2, 2)
+texture = ExtResource("2_olbx3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=524514124]
+position = Vector2(24, -119.3)
+scale = Vector2(30.545, 17.86)
+shape = SubResource("RectangleShape2D_56vou")
+
+[node name="platformpoly" type="CollisionPolygon2D" parent="." unique_id=2118982435]
+polygon = PackedVector2Array(-287.5, 400, -512.5, 143.75, -825, 150, -925, 112.5, -993.75, -6.25, -956.25, -143.75, 962.5, -137.5, 1006.25, 6.25, 943, 147, 674, 190, 100, 218.75, -231.25, 168.75)

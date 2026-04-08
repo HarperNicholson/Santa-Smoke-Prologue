@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://blaxrdhte5y7d"]
+
+[ext_resource type="SpriteFrames" uid="uid://db6k4jvmpp0il" path="res://assets/bonusmobs/globetrotter/gtspriteframes.tres" id="1_tx37n"]
+[ext_resource type="Script" uid="uid://blvxagekgwry8" path="res://assets/bonusmobs/globetrotter/globetrotter.gd" id="1_y0ppm"]
+[ext_resource type="PackedScene" uid="uid://bgi6e8jqie6uf" path="res://assets/randomNametag.tscn" id="3_0mf80"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_r2frd"]
+radius = 42.6667
+height = 192.0
+
+[node name="globetrotter" type="CharacterBody2D" groups=["abductable", "cullable", "freezeable"]]
+scale = Vector2(0.266, 0.266)
+script = ExtResource("1_y0ppm")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -187.94)
+scale = Vector2(1.88, 1.88)
+sprite_frames = ExtResource("1_tx37n")
+animation = &"gt_idle"
+autoplay = "gt_idle"
+frame_progress = 0.449414
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -183.94)
+scale = Vector2(1.88, 1.88)
+shape = SubResource("CapsuleShape2D_r2frd")
+
+[node name="Label" parent="." instance=ExtResource("3_0mf80")]
+offset_left = -87.5
+offset_top = -466.165
+offset_right = 87.5
+offset_bottom = -386.165

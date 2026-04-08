@@ -1,0 +1,347 @@
+[gd_scene format=3 uid="uid://diprsntkbwspk"]
+
+[ext_resource type="Script" uid="uid://cw2ojgtgike8n" path="res://menus/menu related scripts/pauseLayer.gd" id="1_rp06s"]
+[ext_resource type="PackedScene" uid="uid://xk7ex2rmkfyn" path="res://menus/loading.tscn" id="2_i0kur"]
+[ext_resource type="Texture2D" uid="uid://bi07ysw1v448e" path="res://menus/pause/playIcon.png" id="3_n1t85"]
+[ext_resource type="Texture2D" uid="uid://b6xwgbdvk8lg4" path="res://menus/pause/pixel.png" id="4_kmldn"]
+[ext_resource type="Texture2D" uid="uid://dyld77jp01jsb" path="res://menus/pause/pauseIcon.png" id="4_quhh4"]
+[ext_resource type="PackedScene" uid="uid://dyecnu5404240" path="res://menus/muteButton.tscn" id="5_khj55"]
+[ext_resource type="SpriteFrames" uid="uid://cgwct1j2wns8w" path="res://assets/santa/santa animations/player_santa.tres" id="6_w07dp"]
+[ext_resource type="FontFile" uid="uid://bwyjm1irjlrub" path="res://Test Handwritten.otf" id="7_h2hmj"]
+[ext_resource type="Texture2D" uid="uid://dq5heh0d3ajrx" path="res://assets/candycane/nullcane0000.png" id="12_eep6i"]
+[ext_resource type="Texture2D" uid="uid://dxwf06e2b42b6" path="res://assets/candycane/nullcane0001.png" id="13_35bbk"]
+[ext_resource type="Texture2D" uid="uid://bgodig7eucp7e" path="res://assets/candycane/nullcane0002.png" id="14_qm30w"]
+[ext_resource type="Texture2D" uid="uid://bd6i1o7qrmm8t" path="res://assets/candycane/nullcane0003.png" id="15_624tm"]
+[ext_resource type="Texture2D" uid="uid://bhrk33envufym" path="res://assets/candycane/nullcane0004.png" id="16_smcxm"]
+[ext_resource type="Texture2D" uid="uid://bt1yt3onlkvdq" path="res://assets/candycane/nullcane0005.png" id="17_453re"]
+[ext_resource type="Texture2D" uid="uid://b7e456q77qlyi" path="res://assets/candycane/nullcane0006.png" id="18_a1m65"]
+[ext_resource type="Texture2D" uid="uid://dh3vykqln0ov8" path="res://assets/candycane/nullcane0007.png" id="19_v30ar"]
+[ext_resource type="Texture2D" uid="uid://d0o5pyfcsytnh" path="res://assets/candycane/nullcane0008.png" id="20_txdiy"]
+[ext_resource type="Texture2D" uid="uid://cdgl27ndhjuu6" path="res://assets/candycane/nullcane0009.png" id="21_1m34u"]
+[ext_resource type="Theme" uid="uid://bgdd5vu881v6h" path="res://new_theme.tres" id="22_kadir"]
+[ext_resource type="Texture2D" uid="uid://cqawc3haj56kx" path="res://assets/candycane/nullcane0010.png" id="22_s6qqi"]
+[ext_resource type="Texture2D" uid="uid://b1xnuxjcy7hto" path="res://assets/candycane/nullcane0011.png" id="23_111jx"]
+[ext_resource type="Texture2D" uid="uid://bymgcn6202gow" path="res://assets/background/icewall.png" id="25_mff65"]
+[ext_resource type="PackedScene" uid="uid://bt0hkix000se4" path="res://menus/master_volume_slider.tscn" id="27_ciyg0"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lpfd4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_eep6i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_35bbk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_qm30w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_624tm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_smcxm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_453re")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_a1m65")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_v30ar")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_txdiy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_1m34u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_s6qqi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_111jx")
+}],
+"loop": true,
+"name": &"default",
+"speed": 12.0
+}]
+
+[node name="pauseLayer" type="CanvasLayer" unique_id=532980046]
+process_mode = 3
+layer = 101
+script = ExtResource("1_rp06s")
+
+[node name="loadingScreen" parent="." unique_id=1342609752 instance=ExtResource("2_i0kur")]
+visible = false
+
+[node name="pauseLayerAudio" type="AudioStreamPlayer" parent="." unique_id=508467059]
+
+[node name="pauseMenu" type="Node2D" parent="." unique_id=386372502]
+visible = false
+
+[node name="dimoverlay" type="Sprite2D" parent="pauseMenu" unique_id=824319841]
+modulate = Color(0, 0, 0, 0.4)
+position = Vector2(639.875, 360)
+scale = Vector2(1280.25, 720)
+texture = ExtResource("4_kmldn")
+metadata/_edit_lock_ = true
+
+[node name="MuteButton" parent="pauseMenu" unique_id=2067395890 instance=ExtResource("5_khj55")]
+position = Vector2(0, 592)
+metadata/_edit_lock_ = true
+
+[node name="Controls" type="Node2D" parent="pauseMenu" unique_id=1177446201]
+visible = false
+metadata/_edit_lock_ = true
+
+[node name="dimoverlay" type="Sprite2D" parent="pauseMenu/Controls" unique_id=1521040193]
+modulate = Color(0, 0, 0, 0.866667)
+position = Vector2(639.875, 360)
+scale = Vector2(1280.25, 720)
+texture = ExtResource("4_kmldn")
+metadata/_edit_lock_ = true
+
+[node name="BACK" type="Button" parent="pauseMenu/Controls" unique_id=1979296336]
+offset_left = 48.0
+offset_top = 48.0
+offset_right = 416.0
+offset_bottom = 117.0
+theme_override_fonts/font = ExtResource("7_h2hmj")
+theme_override_font_sizes/font_size = 50
+text = "<--     BACK"
+metadata/_edit_lock_ = true
+
+[node name="jumping" type="RichTextLabel" parent="pauseMenu/Controls" unique_id=1922999867]
+offset_left = 40.0
+offset_top = 271.578
+offset_right = 456.0
+offset_bottom = 319.578
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_outline_size = 4
+theme_override_fonts/normal_font = ExtResource("7_h2hmj")
+theme_override_font_sizes/normal_font_size = 33
+text = "JUMP   -   SPACEBAR"
+
+[node name="jumping9" type="RichTextLabel" parent="pauseMenu/Controls" unique_id=1618830856]
+offset_left = 424.00003
+offset_top = 21.0
+offset_right = 1108.28
+offset_bottom = 69.0
+scale = Vector2(0.73800206, 0.73800206)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_outline_size = 4
+theme_override_fonts/normal_font = ExtResource("7_h2hmj")
+theme_override_font_sizes/normal_font_size = 33
+text = "ESC    -     FULLSCREEN       TOGGLE"
+
+[node name="jumping6" type="RichTextLabel" parent="pauseMenu/Controls" unique_id=248976255]
+offset_left = 198.0
+offset_top = 245.578
+offset_right = 592.0
+offset_bottom = 276.578
+scale = Vector2(0.839335, 0.839335)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_outline_size = 4
+theme_override_fonts/normal_font = ExtResource("7_h2hmj")
+theme_override_font_sizes/normal_font_size = 22
+text = "HOLD    TO    JUMP    HIGHER"
+
+[node name="jumping4" type="RichTextLabel" parent="pauseMenu/Controls" unique_id=452490127]
+offset_left = 98.0
+offset_top = 333.578
+offset_right = 492.0
+offset_bottom = 364.578
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_outline_size = 4
+theme_override_fonts/normal_font = ExtResource("7_h2hmj")
+theme_override_font_sizes/normal_font_size = 22
+text = "[YOU    CAN    TRIPLE    JUMP!!!]"
+
+[node name="titlecontrols" type="RichTextLabel" parent="pauseMenu/Controls" unique_id=1188273512]
+offset_left = 560.0
+offset_top = 72.0
+offset_right = 792.0
+offset_bottom = 96.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_outline_size = 4
+theme_override_fonts/normal_font = ExtResource("7_h2hmj")
+text = "CONTROLS    AND    SUCH"
+metadata/_edit_lock_ = true
+
+[node name="falling santa" type="AnimatedSprite2D" parent="pauseMenu/Controls" unique_id=1588837486]
+position = Vector2(552, 295.578)
+scale = Vector2(0.266, 0.266)
+sprite_frames = ExtResource("6_w07dp")
+animation = &"santa_down"
+autoplay = "santa_down"
+
+[node name="runningsanta" type="AnimatedSprite2D" parent="pauseMenu/Controls" unique_id=58909963]
+z_index = 1
+position = Vector2(629.289, 485.578)
+scale = Vector2(0.266, 0.266)
+sprite_frames = ExtResource("6_w07dp")
+animation = &"santa_running"
+autoplay = "santa_running"
+
+[node name="jumping2" type="RichTextLabel" parent="pauseMenu/Controls" unique_id=408250228]
+offset_left = 33.0
+offset_top = 456.0
+offset_right = 634.0
+offset_bottom = 587.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_outline_size = 4
+theme_override_fonts/normal_font = ExtResource("7_h2hmj")
+theme_override_font_sizes/normal_font_size = 33
+text = "RUN   -   ARROW   KEYS    <    >
+"
+
+[node name="jumping8" type="RichTextLabel" parent="pauseMenu/Controls" unique_id=1355628910]
+offset_left = 33.0
+offset_top = 479.0
+offset_right = 634.0
+offset_bottom = 610.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_outline_size = 4
+theme_override_fonts/normal_font = ExtResource("7_h2hmj")
+theme_override_font_sizes/normal_font_size = 33
+text = "
+PRESS    \"SHIFT\"    TO    BOOST"
+
+[node name="jumping3" type="RichTextLabel" parent="pauseMenu/Controls" unique_id=1704052588]
+offset_left = 866.0
+offset_top = 145.0
+offset_right = 1427.0
+offset_bottom = 445.0
+scale = Vector2(0.628318, 0.628318)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_outline_size = 4
+theme_override_fonts/normal_font = ExtResource("7_h2hmj")
+theme_override_font_sizes/normal_font_size = 33
+text = "COLLECT    CANES.
+
+MAKE    YOUR    OWN    DECISIONS.
+
+LET    US    CLOSE    OUR    EYES,    AND    WALK    AWAY."
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="pauseMenu/Controls" unique_id=968547966]
+position = Vector2(1166, 203)
+sprite_frames = SubResource("SpriteFrames_lpfd4")
+autoplay = "default"
+
+[node name="jumping5" type="RichTextLabel" parent="pauseMenu/Controls" unique_id=809301297]
+offset_left = 833.0
+offset_top = 555.0
+offset_right = 1394.0
+offset_bottom = 603.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_outline_size = 4
+theme_override_fonts/normal_font = ExtResource("7_h2hmj")
+theme_override_font_sizes/normal_font_size = 33
+text = "ESCAPE    THE    ICE!!!!"
+
+[node name="icesprite" type="Sprite2D" parent="pauseMenu/Controls" unique_id=839981890]
+position = Vector2(593, 840)
+scale = Vector2(0.485599, 0.485599)
+texture = ExtResource("25_mff65")
+
+[node name="jumping7" type="RichTextLabel" parent="pauseMenu/Controls" unique_id=887747405]
+offset_left = 48.0
+offset_top = 119.0
+offset_right = 496.0
+offset_bottom = 216.0
+scale = Vector2(0.839335, 0.839335)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_outline_size = 4
+theme_override_fonts/normal_font = ExtResource("7_h2hmj")
+theme_override_font_sizes/normal_font_size = 18
+text = "GAMEPAD:    
+LEFT    AND   RIGHT    TO    MOVE,
+[A]   TO   JUMP,
+[RT]     TO    BOOST"
+
+[node name="PauseTexture" type="Sprite2D" parent="pauseMenu" unique_id=2138472096]
+position = Vector2(640, 360)
+scale = Vector2(0.8, 0.8)
+metadata/_edit_lock_ = true
+
+[node name="PausedLabel" type="RichTextLabel" parent="pauseMenu/PauseTexture" unique_id=1627167951]
+offset_left = -156.25
+offset_top = -230.0
+offset_right = 153.75
+offset_bottom = -150.0
+theme = ExtResource("22_kadir")
+theme_override_font_sizes/normal_font_size = 60
+text = "PAUSED"
+metadata/_edit_use_anchors_ = true
+
+[node name="bControls" type="Button" parent="pauseMenu/PauseTexture" unique_id=1970910506]
+offset_left = -120.0
+offset_top = -80.0
+offset_right = 110.0
+offset_bottom = -24.0
+theme = ExtResource("22_kadir")
+text = "CONTROLS"
+metadata/_edit_use_anchors_ = true
+
+[node name="bRestart" type="Button" parent="pauseMenu/PauseTexture" unique_id=1729729585]
+offset_left = -120.0
+offset_top = 50.0
+offset_right = 110.0
+offset_bottom = 106.0
+theme = ExtResource("22_kadir")
+text = "RESTART"
+metadata/_edit_use_anchors_ = true
+
+[node name="bQuit" type="Button" parent="pauseMenu/PauseTexture" unique_id=802480793]
+offset_left = -120.0
+offset_top = 160.0
+offset_right = 110.0
+offset_bottom = 216.0
+theme = ExtResource("22_kadir")
+text = "QUIT
+"
+metadata/_edit_use_anchors_ = true
+
+[node name="MasterVolumeSlider" parent="pauseMenu/PauseTexture" unique_id=1492032232 instance=ExtResource("27_ciyg0")]
+position = Vector2(-507.5, 358.75)
+scale = Vector2(1.25, 1.25)
+
+[node name="playButton" type="TextureButton" parent="." unique_id=1580773616]
+visible = false
+modulate = Color(1, 1, 1, 0.498039)
+offset_left = 1152.0
+offset_right = 1280.0
+offset_bottom = 128.0
+texture_normal = ExtResource("3_n1t85")
+
+[node name="pauseButton" type="TextureButton" parent="." unique_id=126269964]
+modulate = Color(1, 1, 1, 0.498039)
+offset_left = 1152.0
+offset_right = 1280.0
+offset_bottom = 128.0
+texture_normal = ExtResource("4_quhh4")
+
+[node name="Timer" type="Timer" parent="." unique_id=42395497]
+wait_time = 1.1
+
+[node name="RestartTimer" type="Timer" parent="." unique_id=655588823]
+wait_time = 1.1
+
+[connection signal="mouse_entered" from="pauseMenu/Controls/BACK" to="." method="_on_back_mouse_entered"]
+[connection signal="pressed" from="pauseMenu/Controls/BACK" to="." method="_on_back_pressed"]
+[connection signal="mouse_entered" from="pauseMenu/PauseTexture/bControls" to="." method="_on_b_controls_mouse_entered"]
+[connection signal="pressed" from="pauseMenu/PauseTexture/bControls" to="." method="_on_b_controls_pressed"]
+[connection signal="mouse_entered" from="pauseMenu/PauseTexture/bRestart" to="." method="_on_b_restart_mouse_entered"]
+[connection signal="pressed" from="pauseMenu/PauseTexture/bRestart" to="." method="_on_b_restart_pressed"]
+[connection signal="mouse_entered" from="pauseMenu/PauseTexture/bQuit" to="." method="_on_b_quit_mouse_entered"]
+[connection signal="pressed" from="pauseMenu/PauseTexture/bQuit" to="." method="_on_b_quit_pressed"]
+[connection signal="mouse_entered" from="playButton" to="." method="_on_play_button_mouse_entered"]
+[connection signal="mouse_exited" from="playButton" to="." method="_on_play_button_mouse_exited"]
+[connection signal="pressed" from="playButton" to="." method="_on_play_button_pressed"]
+[connection signal="mouse_entered" from="pauseButton" to="." method="_on_pause_button_mouse_entered"]
+[connection signal="mouse_exited" from="pauseButton" to="." method="_on_pause_button_mouse_exited"]
+[connection signal="pressed" from="pauseButton" to="." method="_on_pause_button_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="RestartTimer" to="." method="_on_restart_timer_timeout"]

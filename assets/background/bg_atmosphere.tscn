@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://d1nafpcaxcm5k"]
+
+[ext_resource type="Texture2D" uid="uid://b4wmdd8b2gf3t" path="res://assets/background/atmosphere.jpg" id="1_emsnx"]
+
+[node name="bg_atmosphere" type="Sprite2D"]
+z_index = -6
+position = Vector2(639, 360)
+scale = Vector2(1.00184, 1.00184)
+texture = ExtResource("1_emsnx")

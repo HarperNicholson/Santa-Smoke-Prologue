@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://b2hda5a8x0e73"]
+
+[ext_resource type="Texture2D" uid="uid://b6xwgbdvk8lg4" path="res://menus/pause/pixel.png" id="1_2avly"]
+[ext_resource type="Script" uid="uid://dblqlmrt4gw4b" path="res://menus/menu related scripts/blackoverlay_fade.gd" id="2_yhus0"]
+
+[node name="blackoverlay_fade" type="Sprite2D"]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(639.875, 360)
+scale = Vector2(1280.25, 720)
+texture = ExtResource("1_2avly")
+script = ExtResource("2_yhus0")
+metadata/_edit_lock_ = true

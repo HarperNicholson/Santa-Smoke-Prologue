@@ -1,0 +1,256 @@
+[gd_scene load_steps=50 format=3 uid="uid://bc5lrcd53er4h"]
+
+[ext_resource type="Script" uid="uid://beb3mbjy4jf10" path="res://assets/bonusmobs/UFO/UFO.gd" id="1_wim2o"]
+[ext_resource type="Texture2D" uid="uid://ci4jdiqv30ju0" path="res://assets/bonusmobs/UFO/beam/beaming0002.png" id="2_jbk1n"]
+[ext_resource type="Texture2D" uid="uid://bxr2nryxb5uut" path="res://assets/bonusmobs/UFO/ufosprite.png" id="3_eyusv"]
+[ext_resource type="Texture2D" uid="uid://515q8gvjvu53" path="res://assets/bonusmobs/UFO/beam/beaming0003.png" id="3_s6po1"]
+[ext_resource type="Texture2D" uid="uid://btijmk2ly2sv4" path="res://assets/santa/light.png" id="4_hjvp2"]
+[ext_resource type="Texture2D" uid="uid://bfognht1twipq" path="res://assets/bonusmobs/UFO/beam/beaming0004.png" id="4_ydkfc"]
+[ext_resource type="Texture2D" uid="uid://dmyy3rc27binj" path="res://assets/bonusmobs/UFO/beam/beaming0005.png" id="5_i52lx"]
+[ext_resource type="Texture2D" uid="uid://4nscjiyhdjfq" path="res://assets/bonusmobs/UFO/beam/beaming0006.png" id="6_54v84"]
+[ext_resource type="Texture2D" uid="uid://s0ihfrff0rxl" path="res://assets/bonusmobs/UFO/beam/beaming0007.png" id="7_hsfy0"]
+[ext_resource type="AudioStream" uid="uid://dw47f5dj3n66e" path="res://sounds/ufo/80hz.mp3" id="8_a8pye"]
+[ext_resource type="Texture2D" uid="uid://dxmt6km78o16n" path="res://assets/bonusmobs/UFO/beam/beaming0008.png" id="8_cr8j3"]
+[ext_resource type="Texture2D" uid="uid://lwuen36j4dn5" path="res://assets/bonusmobs/UFO/beam/beaming0009.png" id="9_4yp0u"]
+[ext_resource type="AudioStream" uid="uid://bks0hp6mfeogl" path="res://sounds/ufo/65hz.mp3" id="9_b88e5"]
+[ext_resource type="Texture2D" uid="uid://bi1h3uqbelpnx" path="res://assets/bonusmobs/UFO/beam/beaming0010.png" id="10_r4q16"]
+[ext_resource type="Texture2D" uid="uid://bvcmrogm1cr64" path="res://assets/bonusmobs/UFO/beam/beaming0011.png" id="11_al6lv"]
+[ext_resource type="Texture2D" uid="uid://diq4i86ip01cd" path="res://assets/bonusmobs/UFO/beam/beaming0012.png" id="12_r3hn3"]
+[ext_resource type="Texture2D" uid="uid://me4hwlnp263b" path="res://assets/bonusmobs/UFO/beam/beaming0013.png" id="13_l3l06"]
+[ext_resource type="Texture2D" uid="uid://cknn7t8x188ko" path="res://assets/bonusmobs/UFO/beam/beaming0014.png" id="14_0wmex"]
+[ext_resource type="Texture2D" uid="uid://c0fnw5ihwfjpt" path="res://assets/bonusmobs/UFO/beam/beaming0015.png" id="15_rlbat"]
+[ext_resource type="Texture2D" uid="uid://cgjye0lobpug4" path="res://assets/bonusmobs/UFO/beam/beaming0016.png" id="16_pqrbd"]
+[ext_resource type="Texture2D" uid="uid://ctuipsws04me8" path="res://assets/bonusmobs/UFO/beam/beaming0017.png" id="17_6l1k8"]
+[ext_resource type="Texture2D" uid="uid://ddmggi5nkmngj" path="res://assets/bonusmobs/UFO/beam/beaming0018.png" id="18_ftu0x"]
+[ext_resource type="Texture2D" uid="uid://ba2qwxsr5ksuc" path="res://assets/bonusmobs/UFO/beam/beaming0019.png" id="19_nd1kh"]
+[ext_resource type="Texture2D" uid="uid://b6h1shlwffiqs" path="res://assets/bonusmobs/UFO/beam/beaming0020.png" id="20_71qjm"]
+[ext_resource type="Texture2D" uid="uid://d4mr81hg544cg" path="res://assets/bonusmobs/UFO/beam/beaming0021.png" id="21_0jbm1"]
+[ext_resource type="Texture2D" uid="uid://dn48m267a8sr3" path="res://assets/bonusmobs/UFO/beam/beaming0022.png" id="22_0i2xp"]
+[ext_resource type="Texture2D" uid="uid://dc7aexloynv24" path="res://assets/bonusmobs/UFO/beam/beaming0023.png" id="23_35tv5"]
+[ext_resource type="Texture2D" uid="uid://bi0a1hpap4faj" path="res://assets/bonusmobs/UFO/beam/beaming0024.png" id="24_a5xwa"]
+[ext_resource type="Texture2D" uid="uid://c5mchk0s7p3ua" path="res://assets/bonusmobs/UFO/beam/beaming0025.png" id="25_ceu27"]
+[ext_resource type="Texture2D" uid="uid://d1a4epyegd435" path="res://assets/bonusmobs/UFO/beam/beaming0026.png" id="26_r7va4"]
+[ext_resource type="Texture2D" uid="uid://fnkfywt6x0g2" path="res://assets/bonusmobs/UFO/beam/beaming0027.png" id="27_qykwa"]
+[ext_resource type="Texture2D" uid="uid://crlf78j54wa0x" path="res://assets/bonusmobs/UFO/beam/beaming0028.png" id="28_e54kp"]
+[ext_resource type="Texture2D" uid="uid://7nmtu6vhdc56" path="res://assets/bonusmobs/UFO/beam/beaming0029.png" id="29_3a0ou"]
+[ext_resource type="Texture2D" uid="uid://c6dmli6o1sk8c" path="res://assets/bonusmobs/UFO/beam/beaming0030.png" id="30_tyst0"]
+[ext_resource type="Texture2D" uid="uid://qekk04aoanwp" path="res://assets/bonusmobs/UFO/beam/beaming0031.png" id="31_ajxx0"]
+[ext_resource type="Texture2D" uid="uid://bdt3w7spimuxe" path="res://assets/bonusmobs/UFO/beam/beaming0032.png" id="32_qmfg7"]
+[ext_resource type="Texture2D" uid="uid://dqtqgpn0srpf6" path="res://assets/bonusmobs/UFO/beam/beaming0033.png" id="33_jv6aa"]
+[ext_resource type="Texture2D" uid="uid://c7j4wpkumbd4k" path="res://assets/bonusmobs/UFO/beam/beaming0034.png" id="34_s47wp"]
+[ext_resource type="Texture2D" uid="uid://b86xtskexouyb" path="res://assets/bonusmobs/UFO/beam/beaming0035.png" id="35_bckxh"]
+[ext_resource type="Texture2D" uid="uid://djdlkfjlv3xfr" path="res://assets/bonusmobs/UFO/rotate180/rotate0001.png" id="37_atfdd"]
+[ext_resource type="Texture2D" uid="uid://cbvxv8xgkhfho" path="res://assets/bonusmobs/UFO/rotate180/rotate0002.png" id="38_cnig0"]
+[ext_resource type="Texture2D" uid="uid://i73k6qogd17e" path="res://assets/bonusmobs/UFO/rotate180/rotate0003.png" id="39_nvw25"]
+[ext_resource type="Texture2D" uid="uid://dkkv08q6iojih" path="res://assets/bonusmobs/UFO/rotate180/rotate0004.png" id="40_e588y"]
+[ext_resource type="Texture2D" uid="uid://cup3x027gxkx0" path="res://assets/bonusmobs/UFO/rotate180/rotate0005.png" id="41_ujnin"]
+[ext_resource type="Texture2D" uid="uid://cvereu1lhegsv" path="res://assets/bonusmobs/UFO/rotate180/rotate0006.png" id="42_3kpxj"]
+[ext_resource type="Texture2D" uid="uid://dxg3qlh7ad2kd" path="res://assets/bonusmobs/UFO/rotate180/rotate0007.png" id="43_wanwa"]
+[ext_resource type="Texture2D" uid="uid://bda3forym5aa" path="res://assets/bonusmobs/UFO/rotate180/rotate0008.png" id="44_mnl3r"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_aojva"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_jbk1n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_s6po1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ydkfc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_i52lx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_54v84")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_hsfy0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_cr8j3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_4yp0u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_r4q16")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_al6lv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_r3hn3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_l3l06")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_0wmex")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_rlbat")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_pqrbd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_6l1k8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_ftu0x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_nd1kh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_71qjm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_0jbm1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_0i2xp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_35tv5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_a5xwa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_ceu27")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_r7va4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_qykwa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_e54kp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_3a0ou")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_tyst0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_ajxx0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_qmfg7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_jv6aa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_s47wp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_bckxh")
+}, {
+"duration": 1.0,
+"texture": null
+}],
+"loop": false,
+"name": &"beaming",
+"speed": 12.0
+}, {
+"frames": [],
+"loop": false,
+"name": &"default",
+"speed": 1.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1bgi7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_eyusv")
+}],
+"loop": false,
+"name": &"default",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_eyusv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_atfdd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_cnig0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_nvw25")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_e588y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_ujnin")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_3kpxj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_wanwa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_mnl3r")
+}],
+"loop": false,
+"name": &"ship_rotate180",
+"speed": 36.0
+}]
+
+[node name="UFO" type="Node2D"]
+light_mask = 3
+z_index = 4
+script = ExtResource("1_wim2o")
+
+[node name="BeamSprite" type="AnimatedSprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.8)
+position = Vector2(-4, -196)
+sprite_frames = SubResource("SpriteFrames_aojva")
+animation = &"beaming"
+frame = 35
+frame_progress = 1.0
+
+[node name="ShipSprite" type="AnimatedSprite2D" parent="."]
+position = Vector2(-4, -196)
+sprite_frames = SubResource("SpriteFrames_1bgi7")
+autoplay = "default"
+
+[node name="BeamSound" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(-4, -196)
+stream = ExtResource("8_a8pye")
+volume_db = 2.0
+max_distance = 1280.0
+bus = &"morally correct bus"
+
+[node name="InsideShipPoint" type="Node2D" parent="."]
+position = Vector2(-4, -272)
+
+[node name="ShipSound" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(-4, -196)
+stream = ExtResource("9_b88e5")
+autoplay = true
+max_distance = 1000.0
+bus = &"morally correct bus"
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+visible = false
+position = Vector2(0, -12)
+color = Color(0, 0.756863, 0.0784314, 1)
+energy = 1.6
+texture = ExtResource("4_hjvp2")
+texture_scale = 2.0

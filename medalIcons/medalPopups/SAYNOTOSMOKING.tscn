@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://dxpofr0evjhv"]
+
+[ext_resource type="PackedScene" uid="uid://dqjmxyn1jtexc" path="res://medalIcons/achievementGet.tscn" id="1_4jmco"]
+
+[node name="AchievementGet" unique_id=1709264143 instance=ExtResource("1_4jmco")]
+medalDisplayName = "Say no to smoking"
+medalIconPath = "res://medalIcons/nosmoking.jpg"

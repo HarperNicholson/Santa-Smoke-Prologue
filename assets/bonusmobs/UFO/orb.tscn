@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://deb5bricvmemj"]
+
+[ext_resource type="Script" uid="uid://cywpkeby1s23j" path="res://assets/bonusmobs/UFO/orb.gd" id="1_67otu"]
+[ext_resource type="Texture2D" uid="uid://d0de2yx50k63s" path="res://assets/bonusmobs/UFO/orb.png" id="1_sn6g0"]
+
+[node name="Orb" type="Sprite2D"]
+z_index = 4
+position = Vector2(1380, 0)
+texture = ExtResource("1_sn6g0")
+script = ExtResource("1_67otu")

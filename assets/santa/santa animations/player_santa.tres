@@ -1,0 +1,405 @@
+[gd_resource type="SpriteFrames" load_steps=71 format=3 uid="uid://cgwct1j2wns8w"]
+
+[ext_resource type="Texture2D" uid="uid://c6hun4nqd6wwu" path="res://assets/santa/golden santa.png" id="1_o0cvv"]
+[ext_resource type="Texture2D" uid="uid://dw3e1a5tteomf" path="res://assets/santa/santa animations/down/santa_down0001.png" id="1_o1qwn"]
+[ext_resource type="Texture2D" uid="uid://bqxv46jqmdjh1" path="res://assets/santa/santa animations/down/santa_down0002.png" id="2_kmydx"]
+[ext_resource type="Texture2D" uid="uid://b0ne5kojsaikv" path="res://assets/santa/santa animations/down/santa_down0003.png" id="3_00sow"]
+[ext_resource type="Texture2D" uid="uid://brtkdbdxdfex8" path="res://assets/santa/santa animations/down/santa_down0004.png" id="4_nmsh2"]
+[ext_resource type="Texture2D" uid="uid://ddk2dvvq3m1r2" path="res://assets/santa/santa animations/fall/santa_fall0001.png" id="5_it7or"]
+[ext_resource type="Texture2D" uid="uid://c5hnsn6aks1n" path="res://assets/santa/santa animations/fall/santa_fall0002.png" id="6_s8qdm"]
+[ext_resource type="Texture2D" uid="uid://bcgdentlpf1k1" path="res://assets/santa/santa animations/fall/santa_fall0003.png" id="7_xi41o"]
+[ext_resource type="Texture2D" uid="uid://bcpayodd8ytkw" path="res://assets/santa/santa animations/fall/santa_fall0004.png" id="8_ng5m8"]
+[ext_resource type="Texture2D" uid="uid://bm3vqeibwptso" path="res://assets/santa/santa animations/idle/santa_idle0001.png" id="9_2cdrn"]
+[ext_resource type="Texture2D" uid="uid://duldhj0ifxgxb" path="res://assets/santa/santa animations/idle/santa_idle0002.png" id="10_4x8co"]
+[ext_resource type="Texture2D" uid="uid://4i5jlyq6xqio" path="res://assets/santa/santa animations/idle/santa_idle0003.png" id="11_iaynh"]
+[ext_resource type="Texture2D" uid="uid://cpbjh4ovef7yr" path="res://assets/santa/santa animations/idle/santa_idle0004.png" id="12_a6veo"]
+[ext_resource type="Texture2D" uid="uid://c52y4xjvbwo" path="res://assets/santa/santa animations/idle/santa_idle0005.png" id="13_ye6vn"]
+[ext_resource type="Texture2D" uid="uid://dlm0v1pw7wg" path="res://assets/santa/santa animations/idle/santa_idle0006.png" id="14_tb7rw"]
+[ext_resource type="Texture2D" uid="uid://qtclh400bu2w" path="res://assets/santa/santa animations/idle/santa_idle0007.png" id="15_nfg5m"]
+[ext_resource type="Texture2D" uid="uid://b3kw5wp6ot27f" path="res://assets/santa/santa animations/idle/santa_idle0008.png" id="16_sramt"]
+[ext_resource type="Texture2D" uid="uid://cjjt7iwedcyl2" path="res://assets/santa/santa animations/idle/santa_idle0009.png" id="17_0kevc"]
+[ext_resource type="Texture2D" uid="uid://b8kth6tlt3wcf" path="res://assets/santa/santa animations/idle/santa_idle0010.png" id="18_gn7fx"]
+[ext_resource type="Texture2D" uid="uid://ddyv0xj4hv6j6" path="res://assets/santa/santa animations/idle/santa_idle0011.png" id="19_x6h68"]
+[ext_resource type="Texture2D" uid="uid://diuf4r4unvc2s" path="res://assets/santa/santa animations/idle/santa_idle0012.png" id="20_5jr62"]
+[ext_resource type="Texture2D" uid="uid://2l1240yblcjn" path="res://assets/santa/santa animations/jump/santa_jump0001.png" id="21_fnkdd"]
+[ext_resource type="Texture2D" uid="uid://bov8vhes4kb3n" path="res://assets/santa/santa animations/jump/santa_jump0002.png" id="22_nbngr"]
+[ext_resource type="Texture2D" uid="uid://b5h0b6dsysv2u" path="res://assets/santa/santa animations/jump/santa_jump0003.png" id="23_jc0bx"]
+[ext_resource type="Texture2D" uid="uid://5oyqaprwdfvi" path="res://assets/santa/santa animations/jump/santa_jump0004.png" id="24_3c5ru"]
+[ext_resource type="Texture2D" uid="uid://bl58jvvek6xob" path="res://assets/santa/santa animations/jump/santa_jump0005.png" id="25_pkjo3"]
+[ext_resource type="Texture2D" uid="uid://c361tcgmbxw7q" path="res://assets/santa/santa animations/jump/santa_jump0006.png" id="26_2xwpa"]
+[ext_resource type="Texture2D" uid="uid://dcxvmd8dnk84i" path="res://assets/santa/santa animations/land/santa_land0001.png" id="27_tsjre"]
+[ext_resource type="Texture2D" uid="uid://bcoj8h5yk4xf6" path="res://assets/santa/santa animations/land/santa_land0002.png" id="28_i6tf2"]
+[ext_resource type="Texture2D" uid="uid://c6v5ldv2aia80" path="res://assets/santa/santa animations/land/santa_land0003.png" id="29_ng3r2"]
+[ext_resource type="Texture2D" uid="uid://ddaf5pwobr3qx" path="res://assets/santa/santa animations/land/santa_land0004.png" id="30_w6slj"]
+[ext_resource type="Texture2D" uid="uid://b5oj42eppsmoa" path="res://assets/santa/santa animations/land/santa_land0005.png" id="31_02jpy"]
+[ext_resource type="Texture2D" uid="uid://dw1mpf7ums038" path="res://assets/santa/santa animations/land/santa_land0006.png" id="32_xyawc"]
+[ext_resource type="Texture2D" uid="uid://3bi1ps6e3cf7" path="res://assets/santa/santa animations/running/santa_running0001.png" id="33_obqwj"]
+[ext_resource type="Texture2D" uid="uid://bablq14am8fdx" path="res://assets/santa/santa animations/running/santa_running0002.png" id="34_3hoqv"]
+[ext_resource type="Texture2D" uid="uid://clcxfy6w634cg" path="res://assets/santa/santa animations/running/santa_running0003.png" id="35_sas6m"]
+[ext_resource type="Texture2D" uid="uid://kcxs6bygtqp1" path="res://assets/santa/santa animations/running/santa_running0004.png" id="36_8metp"]
+[ext_resource type="Texture2D" uid="uid://djuqtsk51b6mv" path="res://assets/santa/santa animations/running/santa_running0005.png" id="37_1f5ik"]
+[ext_resource type="Texture2D" uid="uid://drcldju5xvfb1" path="res://assets/santa/santa animations/running/santa_running0006.png" id="38_3rp40"]
+[ext_resource type="Texture2D" uid="uid://d1f3a3p5qn7sa" path="res://assets/santa/santa animations/running/santa_running0007.png" id="39_rtsg7"]
+[ext_resource type="Texture2D" uid="uid://dgnmj7elge5i3" path="res://assets/santa/santa animations/running/santa_running0008.png" id="40_v616e"]
+[ext_resource type="Texture2D" uid="uid://c6acsivwq0l5f" path="res://assets/santa/santa animations/up/santa_up0001.png" id="41_5avpt"]
+[ext_resource type="Texture2D" uid="uid://cy50vm8wuxr8m" path="res://assets/santa/santa animations/smoke/santa_smoke0001.png" id="42_nm37k"]
+[ext_resource type="Texture2D" uid="uid://c8dyrm4ryi3wa" path="res://assets/santa/santa animations/up/santa_up0002.png" id="42_qxull"]
+[ext_resource type="Texture2D" uid="uid://djl3irfgn3642" path="res://assets/santa/santa animations/smoke/santa_smoke0002.png" id="43_4i6wr"]
+[ext_resource type="Texture2D" uid="uid://bb11u3t2upvwy" path="res://assets/santa/santa animations/up/santa_up0003.png" id="43_msbrn"]
+[ext_resource type="Texture2D" uid="uid://c0a88o5fhk1si" path="res://assets/santa/santa animations/smoke/santa_smoke0003.png" id="44_e68w6"]
+[ext_resource type="Texture2D" uid="uid://de7lb8l4fwlsv" path="res://assets/santa/santa animations/up/santa_up0004.png" id="44_t76js"]
+[ext_resource type="Texture2D" uid="uid://xieggsr527rv" path="res://assets/santa/santa animations/smoke/santa_smoke0004.png" id="45_nj4lx"]
+[ext_resource type="Texture2D" uid="uid://bjptf24wyvuu8" path="res://assets/santa/santa animations/smoke/santa_smoke0005.png" id="46_ng1u4"]
+[ext_resource type="Texture2D" uid="uid://b164tcsmtuykh" path="res://assets/santa/santa animations/smoke/santa_smoke0006.png" id="47_fucis"]
+[ext_resource type="Texture2D" uid="uid://cea85h3sqsfjf" path="res://assets/santa/santa animations/smoke/santa_smoke0007.png" id="48_fs71o"]
+[ext_resource type="Texture2D" uid="uid://bn43spi58e5re" path="res://assets/santa/santa animations/smoke/santa_smoke0008.png" id="49_mf6kh"]
+[ext_resource type="Texture2D" uid="uid://h54r2grewlmr" path="res://assets/santa/santa animations/smoke/santa_smoke0009.png" id="50_hnmqf"]
+[ext_resource type="Texture2D" uid="uid://crpea1nja3r5x" path="res://assets/santa/santa animations/smoke/santa_smoke0010.png" id="51_4wxvd"]
+[ext_resource type="Texture2D" uid="uid://bhn8426h282w3" path="res://assets/santa/santa animations/smoke/santa_smoke0011.png" id="52_cgshx"]
+[ext_resource type="Texture2D" uid="uid://doh0kd30nqbmv" path="res://assets/santa/santa animations/smoke/santa_smoke0012.png" id="53_acl7o"]
+[ext_resource type="Texture2D" uid="uid://c20gjoflryruv" path="res://assets/santa/santa animations/smoke/santa_smoke0013.png" id="54_20nqj"]
+[ext_resource type="Texture2D" uid="uid://bdso5tl86r2w6" path="res://assets/santa/santa animations/smoke/santa_smoke0014.png" id="55_cls2i"]
+[ext_resource type="Texture2D" uid="uid://b3x5jj1dvkhsj" path="res://assets/santa/santa animations/smoke/santa_smoke0015.png" id="56_rh05x"]
+[ext_resource type="Texture2D" uid="uid://dylscclxdsoq3" path="res://assets/santa/santa animations/smoke/santa_smoke0016.png" id="57_81f14"]
+[ext_resource type="Texture2D" uid="uid://dbeeugl0vfukk" path="res://assets/santa/santa animations/smoke/santa_smoke0017.png" id="58_vg8bv"]
+[ext_resource type="Texture2D" uid="uid://chebbu11q0qxk" path="res://assets/santa/santa animations/smoke/santa_smoke0018.png" id="59_juy6c"]
+[ext_resource type="Texture2D" uid="uid://blrgikchgo8s7" path="res://assets/santa/santa animations/smoke/santa_smoke0019.png" id="60_w1w3m"]
+[ext_resource type="Texture2D" uid="uid://dpi5nkidv80pk" path="res://assets/santa/santa animations/smoke/santa_smoke0020.png" id="61_lffby"]
+[ext_resource type="Texture2D" uid="uid://cnq7ne0b5764h" path="res://assets/santa/santa animations/smoke/santa_smoke0021.png" id="62_6dbvc"]
+[ext_resource type="Texture2D" uid="uid://bc4ptxyih4dbv" path="res://assets/santa/santa animations/smoke/santa_smoke0022.png" id="63_b6qp3"]
+[ext_resource type="Texture2D" uid="uid://c28nhv7de47mb" path="res://assets/santa/santa animations/smoke/santa_smoke0023.png" id="64_eldo1"]
+[ext_resource type="Texture2D" uid="uid://b6p5cfkcike4v" path="res://assets/santa/santa animations/smoke/santa_smoke0024.png" id="65_ltes4"]
+[ext_resource type="Texture2D" uid="uid://m7sewtsjtlum" path="res://assets/santa/santa animations/smoke/santa_smoke0025.png" id="66_aoupm"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_o0cvv")
+}],
+"loop": false,
+"name": &"golden",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_o1qwn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_kmydx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_00sow")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_nmsh2")
+}],
+"loop": true,
+"name": &"santa_down",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_it7or")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_s8qdm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_xi41o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_ng5m8")
+}],
+"loop": true,
+"name": &"santa_fall",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_2cdrn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_4x8co")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_iaynh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_a6veo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_ye6vn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_tb7rw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_nfg5m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_sramt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_0kevc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_gn7fx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_x6h68")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_5jr62")
+}],
+"loop": true,
+"name": &"santa_idle",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("21_fnkdd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_nbngr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_jc0bx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_3c5ru")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_pkjo3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_2xwpa")
+}],
+"loop": true,
+"name": &"santa_jump",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("27_tsjre")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_i6tf2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_ng3r2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_w6slj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_02jpy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_xyawc")
+}],
+"loop": true,
+"name": &"santa_land",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("33_obqwj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_3hoqv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_sas6m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_8metp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_1f5ik")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_3rp40")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_rtsg7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_v616e")
+}],
+"loop": true,
+"name": &"santa_running",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("42_nm37k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_4i6wr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_e68w6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_nj4lx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_ng1u4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_fucis")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_fs71o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_mf6kh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_hnmqf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_4wxvd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_cgshx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_acl7o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_20nqj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_cls2i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_rh05x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_81f14")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_vg8bv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_juy6c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60_w1w3m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("61_lffby")
+}, {
+"duration": 1.0,
+"texture": ExtResource("62_6dbvc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("63_b6qp3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("64_eldo1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("65_ltes4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("62_6dbvc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("63_b6qp3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("64_eldo1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("65_ltes4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("66_aoupm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("62_6dbvc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("63_b6qp3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("64_eldo1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("65_ltes4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("66_aoupm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("62_6dbvc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("63_b6qp3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("64_eldo1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("65_ltes4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("66_aoupm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("62_6dbvc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("63_b6qp3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("64_eldo1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("65_ltes4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("66_aoupm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("62_6dbvc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("63_b6qp3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("64_eldo1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("65_ltes4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("66_aoupm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("63_b6qp3")
+}],
+"loop": true,
+"name": &"santa_smoke",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("41_5avpt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_qxull")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_msbrn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_t76js")
+}],
+"loop": true,
+"name": &"santa_up",
+"speed": 12.0
+}]

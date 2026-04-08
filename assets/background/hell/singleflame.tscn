@@ -1,0 +1,75 @@
+[gd_scene load_steps=15 format=3 uid="uid://bs66d37uvnmi"]
+
+[ext_resource type="Texture2D" uid="uid://d1t8do0ir3pvl" path="res://assets/elf/fire/1fire0001.png" id="1_4yf48"]
+[ext_resource type="Texture2D" uid="uid://ddk8onhoaerp0" path="res://assets/elf/fire/1fire0002.png" id="2_ptgjy"]
+[ext_resource type="Texture2D" uid="uid://b5x34cts7qqro" path="res://assets/elf/fire/1fire0003.png" id="3_uf760"]
+[ext_resource type="Texture2D" uid="uid://doe0etmjsh03" path="res://assets/elf/fire/1fire0004.png" id="4_4440d"]
+[ext_resource type="Texture2D" uid="uid://bx2yfyw3n8ip6" path="res://assets/elf/fire/1fire0005.png" id="5_46ohk"]
+[ext_resource type="Texture2D" uid="uid://b6r7njq4wvtky" path="res://assets/elf/fire/1fire0006.png" id="6_g8t35"]
+[ext_resource type="Texture2D" uid="uid://brj4r1i0dem7o" path="res://assets/elf/fire/1fire0007.png" id="7_h74dy"]
+[ext_resource type="Texture2D" uid="uid://twgxv58bthuu" path="res://assets/elf/fire/1fire0008.png" id="8_cyyn3"]
+[ext_resource type="Texture2D" uid="uid://b4yrajylk8cns" path="res://assets/elf/fire/1fire0009.png" id="9_43ltf"]
+[ext_resource type="Texture2D" uid="uid://qskty2f1udto" path="res://assets/elf/fire/1fire0010.png" id="10_jmkpw"]
+[ext_resource type="Texture2D" uid="uid://btylt1518s0oy" path="res://assets/elf/fire/1fire0011.png" id="11_6skjo"]
+[ext_resource type="Texture2D" uid="uid://dwqu2w4mv0kai" path="res://assets/elf/fire/1fire0012.png" id="12_58l74"]
+[ext_resource type="Script" uid="uid://0smlsnp23ial" path="res://assets/background/hell/fireball.gd" id="47_hpgwu"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_encpk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_4yf48")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_ptgjy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_uf760")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_4440d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_46ohk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_g8t35")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_h74dy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_cyyn3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_43ltf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_jmkpw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_6skjo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_58l74")
+}, {
+"duration": 1.0,
+"texture": null
+}],
+"loop": false,
+"name": &"singleflame",
+"speed": 12.0
+}]
+
+[node name="Singleflame" type="AnimatedSprite2D"]
+position = Vector2(536, 272)
+sprite_frames = SubResource("SpriteFrames_encpk")
+animation = &"singleflame"
+autoplay = "singleflame"
+frame = 12
+frame_progress = 1.0
+script = ExtResource("47_hpgwu")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+autoplay = true
+max_distance = 720.0

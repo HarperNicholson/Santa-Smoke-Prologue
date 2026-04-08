@@ -1,0 +1,92 @@
+[gd_scene load_steps=6 format=3 uid="uid://c8phvdj1keadm"]
+
+[ext_resource type="PackedScene" uid="uid://xk7ex2rmkfyn" path="res://menus/loading.tscn" id="1_qfqbs"]
+[ext_resource type="Texture2D" uid="uid://drsgyb2ao054q" path="res://assets/chimney/assets/PROCEDURALWALL1.png" id="2_jlk5v"]
+[ext_resource type="PackedScene" uid="uid://c8qao3rhcybay" path="res://assets/santa/player_santa.tscn" id="4_41vmc"]
+[ext_resource type="PackedScene" uid="uid://ckbjtoyxkr82r" path="res://assets/chimney/chimney.tscn" id="4_bmx3v"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l643n"]
+size = Vector2(39.9984, 1352)
+
+[node name="Intro" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+z_index = 30
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(1296, 368)
+shape = SubResource("RectangleShape2D_l643n")
+metadata/_edit_lock_ = true
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-16, 379)
+shape = SubResource("RectangleShape2D_l643n")
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(604, 740.001)
+rotation = 1.57079
+shape = SubResource("RectangleShape2D_l643n")
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(632, -16)
+rotation = 1.57079
+shape = SubResource("RectangleShape2D_l643n")
+metadata/_edit_lock_ = true
+
+[node name="loadingScreen" parent="." instance=ExtResource("1_qfqbs")]
+visible = false
+
+[node name="backgroundwall" type="Node2D" parent="."]
+z_index = -12
+position = Vector2(699, -181)
+scale = Vector2(0.16, 0.16)
+metadata/_edit_lock_ = true
+metadata/_edit_group_ = true
+
+[node name="Proceduralwall3" type="Sprite2D" parent="backgroundwall"]
+z_index = -1
+position = Vector2(-3066, 3995)
+scale = Vector2(2, 2)
+texture = ExtResource("2_jlk5v")
+metadata/_edit_lock_ = true
+
+[node name="Proceduralwall2" type="Sprite2D" parent="backgroundwall"]
+z_index = -1
+position = Vector2(-3058, 139)
+scale = Vector2(2, 2)
+texture = ExtResource("2_jlk5v")
+metadata/_edit_lock_ = true
+
+[node name="Proceduralwall4" type="Sprite2D" parent="backgroundwall"]
+z_index = -1
+position = Vector2(296, 3995)
+scale = Vector2(2, 2)
+texture = ExtResource("2_jlk5v")
+metadata/_edit_lock_ = true
+
+[node name="Proceduralwall1" type="Sprite2D" parent="backgroundwall"]
+position = Vector2(304, 139)
+scale = Vector2(2, 2)
+texture = ExtResource("2_jlk5v")
+metadata/_edit_lock_ = true
+
+[node name="Proceduralwall5" type="Sprite2D" parent="backgroundwall"]
+position = Vector2(3660.75, 139)
+scale = Vector2(2, 2)
+texture = ExtResource("2_jlk5v")
+
+[node name="Proceduralwall6" type="Sprite2D" parent="backgroundwall"]
+z_index = -1
+position = Vector2(3652.75, 3995)
+scale = Vector2(2, 2)
+texture = ExtResource("2_jlk5v")
+
+[node name="SantaPlayer" parent="." instance=ExtResource("4_41vmc")]
+position = Vector2(996, 547)
+
+[node name="Chimney" parent="." instance=ExtResource("4_bmx3v")]
+position = Vector2(1319, 546)
+scale = Vector2(0.16, 0.16)

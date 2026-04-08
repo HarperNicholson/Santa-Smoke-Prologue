@@ -1,0 +1,139 @@
+[gd_scene load_steps=22 format=3 uid="uid://bjplvtpk74e3s"]
+
+[ext_resource type="Script" uid="uid://brkdn6n1c8ojr" path="res://assets/background/hell/cigger.gd" id="1_fhpgm"]
+[ext_resource type="Texture2D" uid="uid://drus0qcdkey05" path="res://assets/background/hell/cig/2cigger0013.png" id="2_aje81"]
+[ext_resource type="Texture2D" uid="uid://dagkfkf3fnnsg" path="res://assets/background/hell/cig/2cigger0014.png" id="3_fhkl8"]
+[ext_resource type="Texture2D" uid="uid://ce0ehcp1ei4sg" path="res://assets/background/hell/cig/2cigger0015.png" id="4_cuklb"]
+[ext_resource type="Texture2D" uid="uid://beh6hpp2b0fmi" path="res://assets/background/hell/cig/2cigger0016.png" id="5_t4s42"]
+[ext_resource type="Texture2D" uid="uid://c45x5sgn83vd8" path="res://assets/background/hell/cig/2cigger0017.png" id="6_85slo"]
+[ext_resource type="Texture2D" uid="uid://ch5w0trrf6t01" path="res://assets/background/hell/cig/2cigger0018.png" id="7_jhhvh"]
+[ext_resource type="Texture2D" uid="uid://10rlraax6gvj" path="res://assets/background/hell/cig/2cigger0019.png" id="8_cf78o"]
+[ext_resource type="Texture2D" uid="uid://dkq1e5lp06n3d" path="res://assets/background/hell/cig/2cigger0020.png" id="9_efhoq"]
+[ext_resource type="Texture2D" uid="uid://dghyrytgerm1h" path="res://assets/background/hell/cig/2cigger0021.png" id="10_4eddo"]
+[ext_resource type="Texture2D" uid="uid://fr2561mhdawv" path="res://assets/background/hell/cig/2cigger0022.png" id="11_0quv5"]
+[ext_resource type="Texture2D" uid="uid://d1hmk8nhatemq" path="res://assets/background/hell/cig/2cigger0023.png" id="12_vivvt"]
+[ext_resource type="Texture2D" uid="uid://d1hfhtfxbdk15" path="res://assets/background/hell/cig/2cigger0024.png" id="13_mvruh"]
+[ext_resource type="Texture2D" uid="uid://wim3mklg8j8o" path="res://assets/background/hell/star.png" id="14_2edke"]
+[ext_resource type="AudioStream" uid="uid://666catyv3g07" path="res://sounds/devil/bad_spell.mp3" id="15_h23do"]
+[ext_resource type="Texture2D" uid="uid://btijmk2ly2sv4" path="res://assets/santa/light.png" id="16_f8mpi"]
+[ext_resource type="Script" uid="uid://cq3jshg1mgs5w" path="res://assets/background/hell/lightfadeout.gd" id="17_4teek"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p5bbf"]
+size = Vector2(80, 40)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_h1nvj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_aje81")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_fhkl8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_cuklb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_t4s42")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_85slo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_jhhvh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_cf78o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_efhoq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_4eddo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_0quv5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_vivvt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_mvruh")
+}],
+"loop": true,
+"name": &"cigger",
+"speed": 12.0
+}]
+
+[sub_resource type="Curve" id="Curve_bf80a"]
+_data = [Vector2(0.0389016, 1), 0.0, 0.0, 0, 0, Vector2(0.329519, 0.966292), 0.0, 0.0, 0, 0, Vector2(0.574371, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 4
+
+[sub_resource type="Gradient" id="Gradient_vjbwc"]
+offsets = PackedFloat32Array(0, 0.254279, 0.447433, 0.628362, 0.721271, 1)
+colors = PackedColorArray(1, 0.882777, 0.432892, 1, 1, 1, 1, 1, 1, 1, 0.79085, 1, 1, 0.883333, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1)
+
+[node name="Cigger" type="Area2D"]
+script = ExtResource("1_fhpgm")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(0, -4)
+shape = SubResource("RectangleShape2D_p5bbf")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_h1nvj")
+animation = &"cigger"
+autoplay = "cigger"
+frame_progress = 0.156881
+offset = Vector2(0, -48)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+bus = &"morally correct bus"
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+emitting = false
+amount = 12
+one_shot = true
+explosiveness = 0.98
+randomness = 0.26
+lifetime_randomness = 0.07
+texture = ExtResource("14_2edke")
+emission_shape = 5
+emission_points = PackedVector2Array(0, 2, 2, 2, -2, 2, -2, 0, -2, -2, 0, -2, 2, -2, 2, 0)
+emission_normals = PackedVector2Array()
+emission_colors = PackedColorArray()
+direction = Vector2(1, 1)
+spread = 180.0
+gravity = Vector2(0, 50)
+initial_velocity_max = 114.39
+angular_velocity_min = -214.74
+angular_velocity_max = 543.16
+linear_accel_min = -100.0
+linear_accel_max = 100.0
+tangential_accel_min = -100.0
+tangential_accel_max = 100.0
+angle_min = -720.0
+angle_max = 720.0
+scale_amount_min = 0.25
+scale_amount_max = 0.9
+scale_amount_curve = SubResource("Curve_bf80a")
+color_initial_ramp = SubResource("Gradient_vjbwc")
+hue_variation_min = -1.0
+hue_variation_max = 1.0
+anim_speed_max = 159.35
+anim_offset_max = 1.0
+
+[node name="BadJingle" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("15_h23do")
+volume_db = 7.0
+autoplay = true
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+scale = Vector2(0.49114, 0.49114)
+texture = ExtResource("16_f8mpi")
+script = ExtResource("17_4teek")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="finished" from="AudioStreamPlayer" to="." method="_on_audio_stream_player_finished"]

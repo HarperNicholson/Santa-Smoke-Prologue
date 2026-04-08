@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://cn4x7h3shrtfh"]
+
+[ext_resource type="Texture2D" uid="uid://ddt0nevqbucjt" path="res://assets/background/bg_northpole.jpg" id="1_66o0o"]
+
+[node name="bg_northpole" type="Sprite2D"]
+z_index = -5
+scale = Vector2(5, 5)
+texture = ExtResource("1_66o0o")

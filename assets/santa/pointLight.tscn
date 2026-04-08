@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://dflibviowl3su"]
+
+[ext_resource type="Texture2D" uid="uid://btijmk2ly2sv4" path="res://assets/santa/light.png" id="2_asdre"]
+
+[node name="Lights" type="Node2D"]
+
+[node name="TextureLight" type="PointLight2D" parent="."]
+energy = 0.4
+texture = ExtResource("2_asdre")
+
+[node name="Shadow" type="PointLight2D" parent="."]
+energy = 0.1
+shadow_enabled = true
+shadow_filter = 2
+texture = ExtResource("2_asdre")

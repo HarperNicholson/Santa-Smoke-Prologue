@@ -1,0 +1,47 @@
+[gd_scene load_steps=6 format=3 uid="uid://64jsq1w22pdx"]
+
+[ext_resource type="Texture2D" uid="uid://bymgcn6202gow" path="res://assets/background/icewall.png" id="1_tte8q"]
+[ext_resource type="Script" uid="uid://cxixjx27k8v6i" path="res://Icewall.gd" id="2_f4rwv"]
+[ext_resource type="AudioStream" uid="uid://mbkjqv5s7e81" path="res://sounds/devil/devil8.wav" id="3_ykhu8"]
+[ext_resource type="AudioStream" uid="uid://ca1t61sjlosu7" path="res://sounds/icedraggingloop.wav" id="4_n2lwk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3l17y"]
+size = Vector2(3698, 413)
+
+[node name="Icewall" type="Sprite2D"]
+z_index = 333
+position = Vector2(720, 720)
+texture = ExtResource("1_tte8q")
+script = ExtResource("2_f4rwv")
+metadata/_edit_group_ = true
+
+[node name="iceAudioPlayer" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_ykhu8")
+volume_db = 5.289
+bus = &"morally correct bus"
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
+polygon = PackedVector2Array(-719, -462, -111, -478, 203, -478, 671, -444, 1185, -422, 1437, -422, 1431, 528, -1441, 518, -1439, -478, -993, -460)
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 1.1
+
+[node name="draggingsound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_n2lwk")
+volume_db = 1.0
+autoplay = true
+max_distance = 2560.0
+bus = &"morally correct bus"
+
+[node name="platformCulling" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="platformCulling"]
+position = Vector2(3, 17.5)
+shape = SubResource("RectangleShape2D_3l17y")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="area_entered" from="platformCulling" to="." method="_on_platform_culling_area_entered"]
+[connection signal="body_entered" from="platformCulling" to="." method="_on_platform_culling_body_entered"]

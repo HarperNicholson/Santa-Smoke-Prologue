@@ -1,0 +1,73 @@
+[gd_scene format=3 uid="uid://dqjmxyn1jtexc"]
+
+[ext_resource type="Script" uid="uid://bgmdjevcvm53d" path="res://medalIcons/achievementGetFade.gd" id="1_gkr1p"]
+[ext_resource type="FontFile" uid="uid://cjqrrh67emw3r" path="res://Minecraft.ttf" id="1_i6l1j"]
+[ext_resource type="AudioStream" uid="uid://cy6ir03x4de7j" path="res://sounds/medalunlock.mp3" id="4_7od2e"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3vtkt"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0.180392, 0.180392, 0.180392, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.370364, 0.370364, 0.370364, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+corner_detail = 5
+shadow_color = Color(0, 0, 0, 0.870588)
+shadow_size = 3
+anti_aliasing = false
+
+[sub_resource type="Theme" id="Theme_bulxy"]
+Panel/styles/panel = SubResource("StyleBoxFlat_3vtkt")
+
+[node name="AchievementGet" type="Node2D" unique_id=1709264143]
+z_index = 4096
+position = Vector2(32, 120)
+script = ExtResource("1_gkr1p")
+
+[node name="Panel" type="Panel" parent="." unique_id=1319996820]
+offset_right = 272.0
+offset_bottom = 58.0
+theme = SubResource("Theme_bulxy")
+metadata/_edit_lock_ = true
+
+[node name="AchievementGet" type="RichTextLabel" parent="." unique_id=1572313443]
+offset_left = 59.0
+offset_top = 10.0
+offset_right = 250.0
+offset_bottom = 27.0
+theme_override_colors/default_color = Color(1, 1, 0, 1)
+theme_override_fonts/normal_font = ExtResource("1_i6l1j")
+text = "Achievement get!"
+metadata/_edit_lock_ = true
+
+[node name="DynamicText" type="RichTextLabel" parent="." unique_id=241827489]
+offset_left = 59.0
+offset_top = 30.0
+offset_right = 250.0
+offset_bottom = 47.0
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_fonts/normal_font = ExtResource("1_i6l1j")
+text = "DynamicText"
+metadata/_edit_lock_ = true
+
+[node name="MedalIconSprite" type="Sprite2D" parent="." unique_id=1290684496]
+position = Vector2(29, 29)
+scale = Vector2(0.5, 0.5)
+metadata/_edit_lock_ = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=72954735]
+stream = ExtResource("4_7od2e")
+
+[node name="Timer" type="Timer" parent="." unique_id=1173652018]
+wait_time = 3.0
+one_shot = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -1,0 +1,554 @@
+[gd_scene load_steps=93 format=3 uid="uid://crykejxqtx8cl"]
+
+[ext_resource type="Script" path="res://levelmanager.gd" id="1_hrlpu"]
+[ext_resource type="PackedScene" uid="uid://dgu4o5j5xn102" path="res://platform_gen.tscn" id="1_tbdym"]
+[ext_resource type="PackedScene" uid="uid://b4lar8nh0jy4b" path="res://sounds/wind/windmaker.tscn" id="2_evcfd"]
+[ext_resource type="PackedScene" uid="uid://dxaojfmir43k6" path="res://assets/overlay/overlay_snowdust.tscn" id="4_nko3q"]
+[ext_resource type="PackedScene" uid="uid://cn4x7h3shrtfh" path="res://assets/background/bg_northpole.tscn" id="5_15uuj"]
+[ext_resource type="PackedScene" uid="uid://c8qao3rhcybay" path="res://assets/santa/player_santa.tscn" id="5_bajmb"]
+[ext_resource type="PackedScene" uid="uid://chj6b67cq81fv" path="res://assets/overlay/looping_snow.tscn" id="5_kdbdo"]
+[ext_resource type="Texture2D" uid="uid://cf52wjwjdxppn" path="res://assets/background/snow_wall_l.png" id="6_8csuc"]
+[ext_resource type="Texture2D" uid="uid://0k50bp3851us" path="res://assets/background/snow_wall_r.png" id="7_217s7"]
+[ext_resource type="FontFile" uid="uid://bwyjm1irjlrub" path="res://Test Handwritten.otf" id="7_ljlhi"]
+[ext_resource type="PackedScene" uid="uid://cmpe8f6nbvmnl" path="res://assets/platforms/snow/snow_platform_6.tscn" id="9_00643"]
+[ext_resource type="Script" path="res://caneDisplay.gd" id="10_cyaw1"]
+[ext_resource type="PackedScene" uid="uid://diprsntkbwspk" path="res://menus/pause/pause_layer.tscn" id="11_frgiu"]
+[ext_resource type="Texture2D" uid="uid://tws0qipemiax" path="res://assets/candycane/candycane0000.png" id="11_r28ns"]
+[ext_resource type="Texture2D" uid="uid://pi55fb2f3qqg" path="res://assets/candycane/candycane0001.png" id="12_8hnie"]
+[ext_resource type="Texture2D" uid="uid://w3sab3hykfj7" path="res://assets/candycane/candycane0002.png" id="13_42lts"]
+[ext_resource type="Texture2D" uid="uid://clhr4s0bpltcr" path="res://assets/candycane/candycane0003.png" id="14_b7oxu"]
+[ext_resource type="Texture2D" uid="uid://qvloxqyl4wct" path="res://assets/candycane/candycane0004.png" id="15_o8w34"]
+[ext_resource type="Texture2D" uid="uid://cikp1cmxivw0i" path="res://assets/candycane/candycane0005.png" id="16_4os6p"]
+[ext_resource type="Texture2D" uid="uid://dahic5bfd2ma5" path="res://assets/candycane/candycane0006.png" id="17_7de7t"]
+[ext_resource type="Texture2D" uid="uid://cikfd4pj7v46g" path="res://assets/candycane/candycane0007.png" id="18_q4iil"]
+[ext_resource type="Texture2D" uid="uid://dgr60de5mohlh" path="res://assets/candycane/candycane0008.png" id="19_y48dl"]
+[ext_resource type="Texture2D" uid="uid://c8wa3n6aa6tjd" path="res://assets/candycane/candycane0009.png" id="20_uymya"]
+[ext_resource type="Texture2D" uid="uid://c1nej0o3wlsj5" path="res://assets/candycane/candycane0010.png" id="21_6jf6q"]
+[ext_resource type="Texture2D" uid="uid://f76ky7gbtmod" path="res://assets/candycane/candycane0011.png" id="22_5hrxl"]
+[ext_resource type="Texture2D" uid="uid://dyny2w587y0aq" path="res://assets/candycane/embercane0000.png" id="23_nql40"]
+[ext_resource type="Texture2D" uid="uid://gpu47ttd6u8q" path="res://assets/candycane/embercane0001.png" id="24_jbx0w"]
+[ext_resource type="Texture2D" uid="uid://bed1c1qgfsp66" path="res://assets/candycane/embercane0002.png" id="25_x1y4k"]
+[ext_resource type="Texture2D" uid="uid://cu5hv2ki0aeaf" path="res://assets/candycane/embercane0003.png" id="26_y5arv"]
+[ext_resource type="Texture2D" uid="uid://cr41tqwv154gk" path="res://assets/candycane/embercane0004.png" id="27_6jc3r"]
+[ext_resource type="Texture2D" uid="uid://gm8mo3gwa41k" path="res://assets/candycane/embercane0005.png" id="28_sb34m"]
+[ext_resource type="Texture2D" uid="uid://m5jcy072co8l" path="res://assets/candycane/embercane0006.png" id="29_vkyqu"]
+[ext_resource type="Texture2D" uid="uid://c668n2dn83vf0" path="res://assets/candycane/embercane0007.png" id="30_ymf41"]
+[ext_resource type="Texture2D" uid="uid://d2wuaxblol7in" path="res://assets/candycane/embercane0008.png" id="31_dm7kl"]
+[ext_resource type="Texture2D" uid="uid://cc1j5hkerli10" path="res://assets/candycane/embercane0009.png" id="32_rs0oc"]
+[ext_resource type="Texture2D" uid="uid://dlsae3fw0v7nk" path="res://assets/candycane/embercane0010.png" id="33_7bfw6"]
+[ext_resource type="Texture2D" uid="uid://cgeqgd6q0ao0b" path="res://assets/candycane/embercane0011.png" id="34_x02lh"]
+[ext_resource type="Texture2D" uid="uid://dq5heh0d3ajrx" path="res://assets/candycane/nullcane0000.png" id="35_pm01f"]
+[ext_resource type="Texture2D" uid="uid://dxwf06e2b42b6" path="res://assets/candycane/nullcane0001.png" id="36_3o6d0"]
+[ext_resource type="Texture2D" uid="uid://bgodig7eucp7e" path="res://assets/candycane/nullcane0002.png" id="37_iudj8"]
+[ext_resource type="Texture2D" uid="uid://bd6i1o7qrmm8t" path="res://assets/candycane/nullcane0003.png" id="38_b6exl"]
+[ext_resource type="Texture2D" uid="uid://bhrk33envufym" path="res://assets/candycane/nullcane0004.png" id="39_cvkxa"]
+[ext_resource type="Texture2D" uid="uid://bt1yt3onlkvdq" path="res://assets/candycane/nullcane0005.png" id="40_wic13"]
+[ext_resource type="Texture2D" uid="uid://b7e456q77qlyi" path="res://assets/candycane/nullcane0006.png" id="41_las5n"]
+[ext_resource type="Texture2D" uid="uid://dh3vykqln0ov8" path="res://assets/candycane/nullcane0007.png" id="42_1a02a"]
+[ext_resource type="Texture2D" uid="uid://d0o5pyfcsytnh" path="res://assets/candycane/nullcane0008.png" id="43_rwlxf"]
+[ext_resource type="Texture2D" uid="uid://cdgl27ndhjuu6" path="res://assets/candycane/nullcane0009.png" id="44_nsbp8"]
+[ext_resource type="Texture2D" uid="uid://cqawc3haj56kx" path="res://assets/candycane/nullcane0010.png" id="45_n3yvm"]
+[ext_resource type="Texture2D" uid="uid://b1xnuxjcy7hto" path="res://assets/candycane/nullcane0011.png" id="46_es4t5"]
+[ext_resource type="Texture2D" uid="uid://bj0jnnrhihun3" path="res://assets/candycane/rainbowcane0000.png" id="47_lan4o"]
+[ext_resource type="Texture2D" uid="uid://bncq20j51aogi" path="res://assets/candycane/rainbowcane0001.png" id="48_it0ms"]
+[ext_resource type="Texture2D" uid="uid://bkdrtvric6sb7" path="res://assets/candycane/rainbowcane0002.png" id="49_vsq75"]
+[ext_resource type="Texture2D" uid="uid://s2tkjom8tmqs" path="res://assets/candycane/rainbowcane0003.png" id="50_x87jw"]
+[ext_resource type="Texture2D" uid="uid://rras1ihre1se" path="res://assets/candycane/rainbowcane0004.png" id="51_qddfi"]
+[ext_resource type="Texture2D" uid="uid://6vj65qwrip2t" path="res://assets/candycane/rainbowcane0005.png" id="52_rdbud"]
+[ext_resource type="Texture2D" uid="uid://wiups8soayum" path="res://assets/candycane/rainbowcane0006.png" id="53_5hdwc"]
+[ext_resource type="Texture2D" uid="uid://bwjri22g4gbf0" path="res://assets/candycane/rainbowcane0007.png" id="54_ubjn6"]
+[ext_resource type="Texture2D" uid="uid://btywn3e3eupsd" path="res://assets/candycane/rainbowcane0008.png" id="55_s77is"]
+[ext_resource type="Texture2D" uid="uid://baiorr3jhlh74" path="res://assets/candycane/rainbowcane0009.png" id="56_7b2ld"]
+[ext_resource type="Texture2D" uid="uid://bvdt42iajh2hl" path="res://assets/candycane/rainbowcane0010.png" id="57_ciwv0"]
+[ext_resource type="Texture2D" uid="uid://ce2bp0pbfmwwv" path="res://assets/candycane/rainbowcane0011.png" id="58_ou60n"]
+[ext_resource type="Texture2D" uid="uid://nttk3uv5gtf8" path="res://assets/candycane/red_vs_blu_cane0000.png" id="59_q8hvw"]
+[ext_resource type="Texture2D" uid="uid://bv08uq0wh1upw" path="res://assets/candycane/red_vs_blu_cane0001.png" id="60_tpyvg"]
+[ext_resource type="Texture2D" uid="uid://bm1v680dpw836" path="res://assets/candycane/red_vs_blu_cane0002.png" id="61_wu5kc"]
+[ext_resource type="Texture2D" uid="uid://cpqlf80xiqlmb" path="res://assets/candycane/red_vs_blu_cane0003.png" id="62_yy6qy"]
+[ext_resource type="Texture2D" uid="uid://8ht7d4iluwen" path="res://assets/candycane/red_vs_blu_cane0004.png" id="63_oj153"]
+[ext_resource type="Texture2D" uid="uid://c5spikhxjhrby" path="res://assets/candycane/red_vs_blu_cane0005.png" id="64_muryh"]
+[ext_resource type="Texture2D" uid="uid://dm2ij7xmjebt8" path="res://assets/candycane/red_vs_blu_cane0006.png" id="65_y1ggc"]
+[ext_resource type="Texture2D" uid="uid://cbl3x6pgbycso" path="res://assets/candycane/red_vs_blu_cane0007.png" id="66_cidin"]
+[ext_resource type="Texture2D" uid="uid://chh4ttelu3n83" path="res://assets/candycane/red_vs_blu_cane0008.png" id="67_gb38v"]
+[ext_resource type="Texture2D" uid="uid://bkaifqeba3li4" path="res://assets/candycane/red_vs_blu_cane0009.png" id="68_sd1l2"]
+[ext_resource type="Texture2D" uid="uid://w00haneeapsg" path="res://assets/candycane/red_vs_blu_cane0010.png" id="69_dhx4g"]
+[ext_resource type="Texture2D" uid="uid://cb6hqffti6uef" path="res://assets/candycane/red_vs_blu_cane0011.png" id="70_x72j3"]
+[ext_resource type="Script" path="res://lastCane.gd" id="71_7taeb"]
+[ext_resource type="Script" path="res://secretButton2.gd" id="73_sdysu"]
+[ext_resource type="PackedScene" uid="uid://canuh6gyd2s7w" path="res://menus/secret_label.tscn" id="74_xk168"]
+[ext_resource type="PackedScene" uid="uid://64jsq1w22pdx" path="res://icewall.tscn" id="75_1dtkc"]
+[ext_resource type="Script" path="res://menus/secret_label.gd" id="75_evyk1"]
+[ext_resource type="Script" path="res://height_display.gd" id="77_khny3"]
+[ext_resource type="Script" path="res://NewBlackOverlay.gd" id="78_iuqku"]
+[ext_resource type="Texture2D" uid="uid://clbc5yc1nf2lw" path="res://assets/background/foggymoody111.png" id="79_duaho"]
+[ext_resource type="Texture2D" uid="uid://tyxgy3r5ti0w" path="res://assets/background/foregroundstatic.png" id="79_hfxyy"]
+[ext_resource type="Texture2D" uid="uid://b6xwgbdvk8lg4" path="res://menus/pause/pixel.png" id="79_r8057"]
+[ext_resource type="PackedScene" uid="uid://bc5lrcd53er4h" path="res://assets/bonusmobs/UFO/UFO.tscn" id="80_rph6o"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0dw2c"]
+size = Vector2(32, 720)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tp6er"]
+resource_name = "candycaneSpriteFrames"
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_r28ns")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_8hnie")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_42lts")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_b7oxu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_o8w34")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_4os6p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_7de7t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_q4iil")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_y48dl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_uymya")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_6jf6q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_5hrxl")
+}],
+"loop": true,
+"name": &"candycane",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("23_nql40")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_jbx0w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_x1y4k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_y5arv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_6jc3r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_sb34m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_vkyqu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_ymf41")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_dm7kl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_rs0oc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_7bfw6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_x02lh")
+}],
+"loop": true,
+"name": &"embercane",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("35_pm01f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_3o6d0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_iudj8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_b6exl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_cvkxa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_wic13")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_las5n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_1a02a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_rwlxf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_nsbp8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_n3yvm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_es4t5")
+}],
+"loop": true,
+"name": &"nullcane",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("47_lan4o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_it0ms")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_vsq75")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_x87jw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_qddfi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_rdbud")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_5hdwc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_ubjn6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_s77is")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_7b2ld")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_ciwv0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_ou60n")
+}],
+"loop": true,
+"name": &"rainbowcane",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("59_q8hvw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60_tpyvg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("61_wu5kc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("62_yy6qy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("63_oj153")
+}, {
+"duration": 1.0,
+"texture": ExtResource("64_muryh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("65_y1ggc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("66_cidin")
+}, {
+"duration": 1.0,
+"texture": ExtResource("67_gb38v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("68_sd1l2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("69_dhx4g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("70_x72j3")
+}],
+"loop": true,
+"name": &"red_vs_blu_cane",
+"speed": 12.0
+}]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kg27k"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8hafx"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_e5epb"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ss8n0"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kbdfo"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ju81q"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("79_hfxyy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("79_duaho")
+}, {
+"duration": 1.0,
+"texture": ExtResource("79_hfxyy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("79_duaho")
+}],
+"loop": false,
+"name": &"abduction",
+"speed": 1.0
+}]
+
+[node name="Testing" type="Node2D"]
+script = ExtResource("1_hrlpu")
+
+[node name="Windmaker" parent="." instance=ExtResource("2_evcfd")]
+
+[node name="PlatformGen" parent="." instance=ExtResource("1_tbdym")]
+
+[node name="SantaPlayer" parent="." instance=ExtResource("5_bajmb")]
+position = Vector2(644, 640)
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="SantaPlayer"]
+position = Vector2(0, 75.188)
+remote_path = NodePath("../Camera2D")
+
+[node name="Camera2D" type="Camera2D" parent="SantaPlayer"]
+position = Vector2(0, 75.1877)
+process_callback = 0
+limit_left = 0
+limit_right = 1280
+limit_bottom = 720
+limit_smoothed = true
+position_smoothing_enabled = true
+position_smoothing_speed = 10.0
+drag_vertical_enabled = true
+drag_left_margin = 0.0
+drag_top_margin = 0.3
+drag_right_margin = 0.0
+drag_bottom_margin = 0.1
+
+[node name="wallLayer" type="CanvasLayer" parent="SantaPlayer/Camera2D"]
+layer = 0
+
+[node name="snow_walls" type="Node2D" parent="SantaPlayer/Camera2D/wallLayer"]
+z_index = 7
+
+[node name="wallL" type="StaticBody2D" parent="SantaPlayer/Camera2D/wallLayer/snow_walls"]
+
+[node name="SnowWallL" type="Sprite2D" parent="SantaPlayer/Camera2D/wallLayer/snow_walls/wallL"]
+position = Vector2(1280, 360)
+texture = ExtResource("6_8csuc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SantaPlayer/Camera2D/wallLayer/snow_walls/wallL"]
+position = Vector2(0, 360)
+scale = Vector2(1, 100000)
+shape = SubResource("RectangleShape2D_0dw2c")
+
+[node name="wallR" type="StaticBody2D" parent="SantaPlayer/Camera2D/wallLayer/snow_walls"]
+
+[node name="SnowWallR" type="Sprite2D" parent="SantaPlayer/Camera2D/wallLayer/snow_walls/wallR"]
+position = Vector2(0, 360)
+rotation = 3.14159
+texture = ExtResource("7_217s7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SantaPlayer/Camera2D/wallLayer/snow_walls/wallR"]
+position = Vector2(1280, 360)
+scale = Vector2(1, 100000)
+shape = SubResource("RectangleShape2D_0dw2c")
+
+[node name="bgLayer" type="CanvasLayer" parent="SantaPlayer/Camera2D"]
+layer = -1
+
+[node name="bg_northpole" parent="SantaPlayer/Camera2D/bgLayer" instance=ExtResource("5_15uuj")]
+position = Vector2(640, 360)
+scale = Vector2(0.333, 0.333)
+
+[node name="overLayer" type="CanvasLayer" parent="SantaPlayer/Camera2D"]
+layer = 10
+
+[node name="looping_snow" parent="SantaPlayer/Camera2D/overLayer" instance=ExtResource("5_kdbdo")]
+z_index = 5
+
+[node name="overlay_snowdust" parent="SantaPlayer/Camera2D/overLayer" instance=ExtResource("4_nko3q")]
+position = Vector2(640, 360)
+rotation = -3.14159
+scale = Vector2(1.333, 1.333)
+frame = 0
+frame_progress = 0.0
+metadata/_edit_group_ = true
+
+[node name="pauseLayer" parent="SantaPlayer/Camera2D" instance=ExtResource("11_frgiu")]
+
+[node name="UILayer" type="CanvasLayer" parent="SantaPlayer/Camera2D"]
+layer = 10
+
+[node name="caneDisplay" type="RichTextLabel" parent="SantaPlayer/Camera2D/UILayer"]
+z_index = 33
+anchors_preset = -1
+anchor_right = 0.09375
+offset_left = 96.0
+offset_top = 40.0
+offset_right = 144.0
+offset_bottom = 88.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(1, 1, 1, 1)
+theme_override_constants/shadow_outline_size = 4
+theme_override_fonts/normal_font = ExtResource("7_ljlhi")
+theme_override_font_sizes/normal_font_size = 33
+text = "A835JFA00H"
+script = ExtResource("10_cyaw1")
+metadata/_edit_use_anchors_ = true
+
+[node name="lastCane" type="AnimatedSprite2D" parent="SantaPlayer/Camera2D/UILayer"]
+position = Vector2(56, 64)
+sprite_frames = SubResource("SpriteFrames_tp6er")
+animation = &"candycane"
+frame = 1
+frame_progress = 0.702874
+script = ExtResource("71_7taeb")
+
+[node name="secretButton2" type="Button" parent="SantaPlayer/Camera2D/UILayer"]
+anchors_preset = -1
+anchor_left = -0.021875
+anchor_top = -0.00416667
+anchor_right = -0.021875
+anchor_bottom = -0.00416667
+offset_left = 40.0
+offset_top = 34.0
+offset_right = 270.0
+offset_bottom = 90.0
+theme_override_colors/font_color = Color(0.52549, 0.678431, 1, 1)
+theme_override_fonts/font = ExtResource("7_ljlhi")
+theme_override_font_sizes/font_size = 33
+theme_override_styles/normal = SubResource("StyleBoxEmpty_kg27k")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_8hafx")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_e5epb")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_ss8n0")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_kbdfo")
+text = "
+"
+script = ExtResource("73_sdysu")
+metadata/_edit_use_anchors_ = true
+
+[node name="secrettimer" type="Timer" parent="SantaPlayer/Camera2D/UILayer/secretButton2"]
+wait_time = 1.1
+
+[node name="secretLabel" parent="SantaPlayer/Camera2D/UILayer" instance=ExtResource("74_xk168")]
+anchor_top = -0.0527778
+anchor_right = 0.105469
+anchor_bottom = -0.0527778
+offset_left = 87.0
+offset_top = 118.0
+offset_right = 135.0
+offset_bottom = 166.0
+theme_override_font_sizes/normal_font_size = 20
+text = "^  CLICK   ME! ^"
+script = ExtResource("75_evyk1")
+
+[node name="height" type="RichTextLabel" parent="SantaPlayer/Camera2D/UILayer"]
+z_index = 33
+anchors_preset = -1
+anchor_left = -0.08125
+anchor_right = 0.164063
+offset_left = 568.0
+offset_top = 38.0
+offset_right = 616.0
+offset_bottom = 86.0
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(1, 1, 1, 1)
+theme_override_constants/shadow_outline_size = 4
+theme_override_fonts/normal_font = ExtResource("7_ljlhi")
+theme_override_font_sizes/normal_font_size = 33
+bbcode_enabled = true
+text = "A835JFA00H"
+script = ExtResource("77_khny3")
+metadata/_edit_use_anchors_ = true
+
+[node name="unstuck_label" type="RichTextLabel" parent="SantaPlayer/Camera2D/UILayer"]
+offset_left = 488.0
+offset_top = 212.0
+offset_right = 816.0
+offset_bottom = 284.0
+theme_override_colors/font_shadow_color = Color(0.45098, 0.407843, 0.866667, 1)
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/shadow_outline_size = 6
+theme_override_fonts/normal_font = ExtResource("7_ljlhi")
+theme_override_font_sizes/normal_font_size = 51
+text = "UNSTUCK!"
+
+[node name="AbductionSceneLayer" type="CanvasLayer" parent="SantaPlayer/Camera2D"]
+layer = 90
+visible = false
+script = ExtResource("78_iuqku")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="SantaPlayer/Camera2D/AbductionSceneLayer"]
+position = Vector2(640, 360)
+sprite_frames = SubResource("SpriteFrames_ju81q")
+animation = &"abduction"
+
+[node name="NewBlackOverlay" type="CanvasLayer" parent="SantaPlayer/Camera2D"]
+layer = 100
+script = ExtResource("78_iuqku")
+
+[node name="Sprite2D" type="Sprite2D" parent="SantaPlayer/Camera2D/NewBlackOverlay"]
+modulate = Color(0, 0, 0, 0)
+position = Vector2(647, 374.5)
+scale = Vector2(1434, 815)
+texture = ExtResource("79_r8057")
+
+[node name="floor" parent="." instance=ExtResource("9_00643")]
+position = Vector2(584, 744)
+scale = Vector2(6.08, 0.16)
+
+[node name="Icewall" parent="." instance=ExtResource("75_1dtkc")]
+position = Vector2(720, 1989)
+
+[node name="POSTIMER" type="Timer" parent="Icewall"]
+wait_time = 4.0
+
+[node name="killtimer" type="Timer" parent="."]
+wait_time = 1.1
+
+[node name="music" type="AudioStreamPlayer" parent="."]
+volume_db = -6.934
+autoplay = true
+bus = &"Music"
+
+[node name="UFO" parent="." instance=ExtResource("80_rph6o")]
+position = Vector2(1712, 640)
+
+[connection signal="pressed" from="SantaPlayer/Camera2D/UILayer/secretButton2" to="SantaPlayer/Camera2D/UILayer/secretButton2" method="_on_pressed"]
+[connection signal="timeout" from="SantaPlayer/Camera2D/UILayer/secretButton2/secrettimer" to="SantaPlayer/Camera2D/UILayer/secretButton2" method="_on_secrettimer_timeout"]
+[connection signal="timeout" from="Icewall/POSTIMER" to="Icewall" method="_on_postimer_timeout"]
+[connection signal="timeout" from="killtimer" to="." method="_on_killtimer_timeout"]

@@ -1,0 +1,40 @@
+[gd_scene load_steps=5 format=3 uid="uid://cv7pb5u8ojyyd"]
+
+[ext_resource type="Shader" uid="uid://be53tfxbl1lwy" path="res://assets/chimney/heatWave.gdshader" id="1_ild1n"]
+[ext_resource type="Texture2D" uid="uid://btijmk2ly2sv4" path="res://assets/santa/light.png" id="2_n3ksh"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_hqy16"]
+shader = ExtResource("1_ild1n")
+shader_parameter/force = 0.26
+shader_parameter/scale = 0.01
+shader_parameter/debug = false
+
+[sub_resource type="Curve" id="Curve_t3app"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.910543, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[node name="HeatWaveTall" type="CPUParticles2D"]
+texture_filter = 1
+material = SubResource("ShaderMaterial_hqy16")
+position = Vector2(0, 144000)
+amount = 512
+lifetime = 45.0
+preprocess = 45.0
+speed_scale = 0.75
+randomness = 0.03
+lifetime_randomness = 0.02
+texture = ExtResource("2_n3ksh")
+emission_shape = 3
+emission_rect_extents = Vector2(640, 1)
+gravity = Vector2(0, -200)
+initial_velocity_max = 6.02
+linear_accel_min = -59.03
+linear_accel_max = -59.03
+radial_accel_min = -10.55
+radial_accel_max = 5.2
+damping_max = 45.194
+angle_max = 195.0
+scale_amount_min = 2.11
+scale_amount_max = 4.49
+scale_amount_curve = SubResource("Curve_t3app")
+anim_offset_max = 0.4096

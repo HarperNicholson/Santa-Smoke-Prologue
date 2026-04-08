@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://df4a5hihet3mc"]
+
+[ext_resource type="Texture2D" uid="uid://btijmk2ly2sv4" path="res://assets/santa/light.png" id="1_2k01c"]
+[ext_resource type="Curve" uid="uid://dwm7t382fdsg1" path="res://assets/chimney/assets/scalecurve.tres" id="2_gto7l"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_33i8r"]
+
+[node name="flecks" type="CPUParticles2D"]
+modulate = Color(0, 0, 0, 1)
+texture_filter = 1
+material = SubResource("CanvasItemMaterial_33i8r")
+position = Vector2(0, 144000)
+amount = 200
+lifetime = 73.0
+preprocess = 60.0
+speed_scale = 0.36
+texture = ExtResource("1_2k01c")
+emission_shape = 3
+emission_rect_extents = Vector2(640, 1)
+gravity = Vector2(0, -40)
+scale_amount_min = 0.02
+scale_amount_max = 0.07
+scale_amount_curve = ExtResource("2_gto7l")

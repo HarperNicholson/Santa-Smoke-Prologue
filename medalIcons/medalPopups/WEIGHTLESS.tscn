@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://d1giio7p1vyd0"]
+
+[ext_resource type="PackedScene" uid="uid://dqjmxyn1jtexc" path="res://medalIcons/achievementGet.tscn" id="1_lejwl"]
+
+[node name="AchievementGet" unique_id=1709264143 instance=ExtResource("1_lejwl")]
+top_level = true
+medalDisplayName = "Weightless"
+medalIconPath = "res://medalIcons/weightless.png"

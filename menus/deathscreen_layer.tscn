@@ -1,0 +1,151 @@
+[gd_scene format=3 uid="uid://ckb8k8gkxnrsd"]
+
+[ext_resource type="Script" uid="uid://ceklahuii1tsh" path="res://menus/menu related scripts/deathscreen.gd" id="1_v3cnb"]
+[ext_resource type="PackedScene" uid="uid://xk7ex2rmkfyn" path="res://menus/loading.tscn" id="2_4myg3"]
+[ext_resource type="PackedScene" uid="uid://b4lar8nh0jy4b" path="res://sounds/wind/windmaker.tscn" id="2_4r44g"]
+[ext_resource type="Texture2D" uid="uid://b6xwgbdvk8lg4" path="res://menus/pause/pixel.png" id="2_rmvlp"]
+[ext_resource type="FontFile" uid="uid://bwyjm1irjlrub" path="res://Test Handwritten.otf" id="4_h10qq"]
+[ext_resource type="Texture2D" uid="uid://diowi1tt5ngca" path="res://assets/santa/extra/santa.png" id="5_5jp6s"]
+[ext_resource type="AudioStream" uid="uid://o8ij1opcbhc4" path="res://sounds/music/cracktrap.mp3" id="7_ouqhy"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_cmwa8"]
+load_path = "res://.godot/imported/icewall.png-4333aa120fbafded1b818b1c8be62766.ctex"
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8ol3b"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xm5vv"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_o0a3y"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_aepk3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kjj0r"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tfnya"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jmvpp"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bx27k"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_roacg"]
+
+[node name="deathscreen_layer" type="CanvasLayer" unique_id=1460773141]
+process_mode = 3
+layer = 101
+script = ExtResource("1_v3cnb")
+
+[node name="loadingScreen" parent="." unique_id=1487886315 instance=ExtResource("2_4myg3")]
+
+[node name="LoadingScreen" type="Node2D" parent="." unique_id=307656257]
+z_index = 3333
+
+[node name="Windmaker" parent="." unique_id=659822180 instance=ExtResource("2_4r44g")]
+
+[node name="pauseLayerAudio" type="AudioStreamPlayer" parent="." unique_id=1463549900]
+
+[node name="icewallbackimage2" type="Sprite2D" parent="." unique_id=1743140364]
+z_index = -10
+position = Vector2(824, 288)
+scale = Vector2(0.96409, 0.96409)
+texture = SubResource("CompressedTexture2D_cmwa8")
+metadata/_edit_lock_ = true
+
+[node name="frozen santa" type="Sprite2D" parent="." unique_id=1615152269]
+modulate = Color(1, 1, 1, 0.815686)
+z_index = -2
+position = Vector2(328, 264)
+scale = Vector2(0.811111, 0.811111)
+texture = ExtResource("5_5jp6s")
+metadata/_edit_lock_ = true
+
+[node name="icewallfrontimage" type="Sprite2D" parent="." unique_id=1597240805]
+modulate = Color(1, 1, 1, 0.792157)
+position = Vector2(112, 280)
+scale = Vector2(0.811111, 0.811111)
+texture = SubResource("CompressedTexture2D_cmwa8")
+metadata/_edit_lock_ = true
+
+[node name="dimoverlay" type="Sprite2D" parent="." unique_id=1627586203]
+visible = false
+modulate = Color(0, 0, 0, 0.4)
+position = Vector2(639.875, 360)
+scale = Vector2(1280.25, 720)
+texture = ExtResource("2_rmvlp")
+metadata/_edit_lock_ = true
+
+[node name="PausedLabel" type="RichTextLabel" parent="." unique_id=1056618908]
+anchors_preset = -1
+anchor_right = 0.101563
+anchor_bottom = 0.101389
+offset_left = 464.0
+offset_top = 168.0
+offset_right = 774.0
+offset_bottom = 248.0
+theme_override_colors/default_color = Color(0.137255, 0.34902, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_outline_size = 4
+theme_override_constants/shadow_offset_y = 5
+theme_override_fonts/normal_font = ExtResource("4_h10qq")
+theme_override_font_sizes/normal_font_size = 60
+text = "YOU    GOT    TOO    COLD!"
+metadata/_edit_use_anchors_ = true
+metadata/_edit_lock_ = true
+
+[node name="bRestart" type="Button" parent="." unique_id=840142571]
+offset_left = 544.0
+offset_top = 408.0
+offset_right = 774.0
+offset_bottom = 464.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(0.701961, 0.803922, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_constants/h_separation = 0
+theme_override_fonts/font = ExtResource("4_h10qq")
+theme_override_font_sizes/font_size = 33
+theme_override_styles/normal = SubResource("StyleBoxEmpty_8ol3b")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_xm5vv")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_o0a3y")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_aepk3")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_kjj0r")
+text = "RESTART"
+metadata/_edit_use_anchors_ = true
+metadata/_edit_lock_ = true
+
+[node name="bQuit" type="Button" parent="." unique_id=38289446]
+offset_left = 544.0
+offset_top = 488.0
+offset_right = 774.0
+offset_bottom = 544.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(0.701961, 0.803922, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("4_h10qq")
+theme_override_font_sizes/font_size = 33
+theme_override_styles/normal = SubResource("StyleBoxEmpty_8ol3b")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_tfnya")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_jmvpp")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_bx27k")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_roacg")
+text = "QUIT
+"
+metadata/_edit_use_anchors_ = true
+metadata/_edit_lock_ = true
+
+[node name="deathmusic" type="AudioStreamPlayer" parent="." unique_id=181777804]
+stream = ExtResource("7_ouqhy")
+bus = &"Music"
+
+[node name="Timer" type="Timer" parent="." unique_id=2025170442]
+wait_time = 1.1
+
+[node name="RestartTimer" type="Timer" parent="." unique_id=27986600]
+wait_time = 1.1
+
+[connection signal="mouse_entered" from="bRestart" to="." method="_on_b_restart_mouse_entered"]
+[connection signal="pressed" from="bRestart" to="." method="_on_b_restart_pressed"]
+[connection signal="mouse_entered" from="bQuit" to="." method="_on_b_quit_mouse_entered"]
+[connection signal="pressed" from="bQuit" to="." method="_on_b_quit_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="RestartTimer" to="." method="_on_restart_timer_timeout"]

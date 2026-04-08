@@ -1,0 +1,119 @@
+[gd_scene load_steps=14 format=3 uid="uid://crykejxqtx8cl"]
+
+[ext_resource type="PackedScene" uid="uid://dgu4o5j5xn102" path="res://platform_gen.tscn" id="1_tbdym"]
+[ext_resource type="PackedScene" uid="uid://dxaojfmir43k6" path="res://assets/overlay/overlay_snowdust.tscn" id="4_nko3q"]
+[ext_resource type="PackedScene" uid="uid://cn4x7h3shrtfh" path="res://assets/background/bg_northpole.tscn" id="5_15uuj"]
+[ext_resource type="PackedScene" uid="uid://c8qao3rhcybay" path="res://assets/santa/santa.tscn" id="5_bajmb"]
+[ext_resource type="PackedScene" uid="uid://chj6b67cq81fv" path="res://assets/overlay/looping_snow.tscn" id="5_kdbdo"]
+[ext_resource type="Texture2D" uid="uid://cf52wjwjdxppn" path="res://assets/background/snow_wall_l.png" id="6_8csuc"]
+[ext_resource type="Texture2D" uid="uid://0k50bp3851us" path="res://assets/background/snow_wall_r.png" id="7_217s7"]
+[ext_resource type="FontFile" uid="uid://bwyjm1irjlrub" path="res://Test Handwritten.otf" id="7_ljlhi"]
+[ext_resource type="PackedScene" uid="uid://cmpe8f6nbvmnl" path="res://assets/platforms/snow/snow_platform_6.tscn" id="9_00643"]
+[ext_resource type="Script" path="res://changetext.gd" id="9_krwb3"]
+[ext_resource type="Texture2D" uid="uid://c5qts7d8fiwol" path="res://assets/background/icewall.png" id="11_1jtp8"]
+[ext_resource type="PackedScene" uid="uid://diprsntkbwspk" path="res://menus/pause/pause_layer.tscn" id="11_frgiu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0dw2c"]
+size = Vector2(32, 720)
+
+[node name="Testing" type="Node2D"]
+
+[node name="PlatformGen" parent="." instance=ExtResource("1_tbdym")]
+
+[node name="Santa" parent="." instance=ExtResource("5_bajmb")]
+position = Vector2(640, 360)
+SPEED = 1000.0
+JUMP_VELOCITY = -900.0
+
+[node name="Camera2D" type="Camera2D" parent="Santa"]
+limit_left = 0
+limit_right = 1280
+limit_bottom = 720
+
+[node name="floor" parent="." instance=ExtResource("9_00643")]
+position = Vector2(584, 744)
+scale = Vector2(6.08, 0.16)
+
+[node name="canvasLayers" type="Node" parent="."]
+
+[node name="bgLayer" type="CanvasLayer" parent="canvasLayers"]
+layer = -1
+
+[node name="bg_northpole" parent="canvasLayers/bgLayer" instance=ExtResource("5_15uuj")]
+position = Vector2(640, 360)
+scale = Vector2(0.333, 0.333)
+metadata/_edit_group_ = true
+
+[node name="wallLayer" type="CanvasLayer" parent="canvasLayers"]
+layer = 8
+
+[node name="snow_walls" type="Node2D" parent="canvasLayers/wallLayer"]
+
+[node name="wallL" type="StaticBody2D" parent="canvasLayers/wallLayer/snow_walls"]
+
+[node name="SnowWallL" type="Sprite2D" parent="canvasLayers/wallLayer/snow_walls/wallL"]
+position = Vector2(1280, 360)
+texture = ExtResource("6_8csuc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="canvasLayers/wallLayer/snow_walls/wallL"]
+position = Vector2(0, 360)
+shape = SubResource("RectangleShape2D_0dw2c")
+
+[node name="wallR" type="StaticBody2D" parent="canvasLayers/wallLayer/snow_walls"]
+
+[node name="SnowWallR" type="Sprite2D" parent="canvasLayers/wallLayer/snow_walls/wallR"]
+position = Vector2(0, 360)
+rotation = 3.14159
+texture = ExtResource("7_217s7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="canvasLayers/wallLayer/snow_walls/wallR"]
+position = Vector2(1280, 360)
+shape = SubResource("RectangleShape2D_0dw2c")
+
+[node name="overLayer" type="CanvasLayer" parent="canvasLayers"]
+layer = 10
+
+[node name="looping_snow" parent="canvasLayers/overLayer" instance=ExtResource("5_kdbdo")]
+z_index = 5
+
+[node name="overlay_snowdust" parent="canvasLayers/overLayer" instance=ExtResource("4_nko3q")]
+position = Vector2(640, 360)
+rotation = -3.14159
+scale = Vector2(1.333, 1.333)
+frame = 0
+frame_progress = 0.0
+metadata/_edit_group_ = true
+
+[node name="UILayer" type="CanvasLayer" parent="canvasLayers"]
+layer = 10
+
+[node name="canecount" type="RichTextLabel" parent="canvasLayers/UILayer"]
+modulate = Color(0, 0, 0, 1)
+z_index = 33
+offset_left = 96.0
+offset_top = 32.0
+offset_right = 144.0
+offset_bottom = 80.0
+theme_override_fonts/normal_font = ExtResource("7_ljlhi")
+theme_override_font_sizes/normal_font_size = 33
+text = "0"
+metadata/_edit_use_anchors_ = true
+
+[node name="failedspawnlabel" type="RichTextLabel" parent="canvasLayers/UILayer"]
+offset_left = 240.0
+offset_top = 32.0
+offset_right = 728.0
+offset_bottom = 80.0
+theme_override_fonts/normal_font = ExtResource("7_ljlhi")
+theme_override_font_sizes/normal_font_size = 30
+text = "AHSFKJLSHAJK"
+script = ExtResource("9_krwb3")
+
+[node name="iceLayer" type="CanvasLayer" parent="canvasLayers"]
+layer = 100
+
+[node name="Icewall" type="Sprite2D" parent="canvasLayers/iceLayer"]
+position = Vector2(720, 1336)
+texture = ExtResource("11_1jtp8")
+
+[node name="pauseLayer" parent="canvasLayers" instance=ExtResource("11_frgiu")]

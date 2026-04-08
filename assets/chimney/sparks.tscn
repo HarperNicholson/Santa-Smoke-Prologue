@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://b0prrux2qwljm"]
+
+[ext_resource type="Curve" uid="uid://dwm7t382fdsg1" path="res://assets/chimney/assets/scalecurve.tres" id="2_1tt02"]
+[ext_resource type="Texture2D" uid="uid://btijmk2ly2sv4" path="res://assets/santa/light.png" id="2_i5fs7"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_60wm5"]
+
+[node name="sparks" type="CPUParticles2D"]
+modulate = Color(1, 0.764706, 0, 1)
+texture_filter = 1
+material = SubResource("CanvasItemMaterial_60wm5")
+position = Vector2(0, 144000)
+amount = 96
+lifetime = 63.0
+preprocess = 60.0
+speed_scale = 0.6
+texture = ExtResource("2_i5fs7")
+emission_shape = 3
+emission_rect_extents = Vector2(640, 1)
+gravity = Vector2(0, -50)
+angle_max = 9.0
+scale_amount_min = 0.01
+scale_amount_max = 0.06
+scale_amount_curve = ExtResource("2_1tt02")

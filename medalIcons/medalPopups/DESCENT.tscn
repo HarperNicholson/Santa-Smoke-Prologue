@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://s32uax2crwno"]
+
+[ext_resource type="PackedScene" uid="uid://dqjmxyn1jtexc" path="res://medalIcons/achievementGet.tscn" id="1_i63b2"]
+
+[node name="AchievementGet" unique_id=1709264143 instance=ExtResource("1_i63b2")]
+medalDisplayName = "Descent"
+medalIconPath = "res://medalIcons/descent.png"

@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://dnckp6j6wyy8k"]
+
+[ext_resource type="PackedScene" uid="uid://dqjmxyn1jtexc" path="res://medalIcons/achievementGet.tscn" id="1_gejra"]
+
+[node name="AchievementGet" unique_id=1709264143 instance=ExtResource("1_gejra")]
+medalDisplayName = "Evil"
+medalIconPath = "res://medalIcons/ablaze.png"

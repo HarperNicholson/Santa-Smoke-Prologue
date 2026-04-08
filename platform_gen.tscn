@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dgu4o5j5xn102"]
+
+[ext_resource type="Script" uid="uid://km32nt12y1ws" path="res://PlatformGen.gd" id="1_7wu4p"]
+
+[node name="PlatformGen" type="Node2D"]
+script = ExtResource("1_7wu4p")

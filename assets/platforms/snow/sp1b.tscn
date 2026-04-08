@@ -1,0 +1,31 @@
+[gd_scene load_steps=4 format=3 uid="uid://dlpylmwtkhjxb"]
+
+[ext_resource type="Texture2D" uid="uid://dp3q6srtim2k" path="res://assets/sprites_platforms/newtrace/b1b.png" id="1_hnpvr"]
+[ext_resource type="Texture2D" uid="uid://byj7qnueltxnm" path="res://assets/sprites_platforms/newtrace/f1b.png" id="2_1xo4c"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_56vou"]
+size = Vector2(19.0211, 2.72117)
+
+[node name="sp1b" type="StaticBody2D" groups=["cullable"]]
+position = Vector2(40, 0)
+scale = Vector2(0.16, 0.16)
+metadata/_edit_group_ = true
+
+[node name="back" type="Sprite2D" parent="."]
+position = Vector2(0, -89.435)
+scale = Vector2(2, 2)
+texture = ExtResource("1_hnpvr")
+
+[node name="front" type="Sprite2D" parent="."]
+z_index = 2
+position = Vector2(0, -75.865)
+scale = Vector2(2, 2)
+texture = ExtResource("2_1xo4c")
+
+[node name="platformfloor" type="CollisionShape2D" parent="."]
+position = Vector2(-4.5001, -130.3)
+scale = Vector2(30.545, 17.86)
+shape = SubResource("RectangleShape2D_56vou")
+
+[node name="platformpoly" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(62.5, 68.75, -125, 68.75, -225, 50, -287.5, -12.5, -293.75, -112.5, -268, -141, 287, -149, 268.75, -37.5, 218.75, 18.75)

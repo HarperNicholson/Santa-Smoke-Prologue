@@ -1,0 +1,36 @@
+[gd_scene load_steps=4 format=3 uid="uid://bmo5jvhmt4pun"]
+
+[ext_resource type="Shader" uid="uid://be53tfxbl1lwy" path="res://assets/chimney/heatWave.gdshader" id="1_gcged"]
+[ext_resource type="Texture2D" uid="uid://btijmk2ly2sv4" path="res://assets/santa/light.png" id="2_v5hsd"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_dck48"]
+shader = ExtResource("1_gcged")
+shader_parameter/force = 0.26
+shader_parameter/scale = 0.01
+shader_parameter/debug = false
+
+[node name="HeatWave" type="CPUParticles2D"]
+material = SubResource("ShaderMaterial_dck48")
+position = Vector2(19, 231)
+amount = 128
+lifetime = 5.22
+speed_scale = 1.51
+texture = ExtResource("2_v5hsd")
+emission_shape = 3
+emission_rect_extents = Vector2(640, 1)
+gravity = Vector2(0, -100)
+initial_velocity_max = 62.25
+angular_velocity_min = -329.64
+angular_velocity_max = 305.4
+radial_accel_min = -100.0
+radial_accel_max = 100.0
+tangential_accel_min = -49.05
+tangential_accel_max = 40.1
+damping_min = 0.155
+damping_max = 45.194
+angle_max = 195.0
+scale_amount_min = 0.15
+scale_amount_max = 0.93
+anim_speed_min = 0.31
+anim_speed_max = 64.0
+anim_offset_max = 0.4096

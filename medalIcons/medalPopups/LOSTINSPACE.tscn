@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://cg8y5legb8p7g"]
+
+[ext_resource type="PackedScene" uid="uid://dqjmxyn1jtexc" path="res://medalIcons/achievementGet.tscn" id="1_5q1c6"]
+
+[node name="AchievementGet" unique_id=1709264143 instance=ExtResource("1_5q1c6")]
+medalDisplayName = "Lost In Space"
+medalIconPath = "res://medalIcons/lostinspace.JPG"

@@ -1,0 +1,38 @@
+[gd_scene load_steps=9 format=3 uid="uid://dyecnu5404240"]
+
+[ext_resource type="AudioStream" uid="uid://dkpns8nxftg1f" path="res://sounds/clicking/punch5.wav" id="1_4qpmu"]
+[ext_resource type="Texture2D" uid="uid://df33fwvijurxn" path="res://menus/audio cookie/speaker.png" id="1_fwyks"]
+[ext_resource type="Texture2D" uid="uid://degta7igb4doi" path="res://menus/audio cookie/anticirclespeaker.png" id="2_3mk64"]
+[ext_resource type="Script" uid="uid://cxmnqp07io5l7" path="res://menus/menu related scripts/bCookieSFX.gd" id="2_oonvq"]
+[ext_resource type="Texture2D" uid="uid://esevmgri4nbv" path="res://menus/audio cookie/smashed.png" id="3_4xqum"]
+[ext_resource type="Texture2D" uid="uid://dpurn3128om8l" path="res://menus/audio cookie/circlesmashed.png" id="4_l8bh2"]
+[ext_resource type="Script" uid="uid://ry118bn4pmv4" path="res://menus/menu related scripts/bCookieMuteButton.gd" id="5_vc3jv"]
+[ext_resource type="Script" uid="uid://ekbgkmfddvpk" path="res://menus/menu related scripts/bCookieUnmute.gd" id="8_nbw01"]
+
+[node name="MuteButton" type="Node2D"]
+
+[node name="clicksounds" type="AudioStreamPlayer" parent="." groups=["Audioplayers"]]
+stream = ExtResource("1_4qpmu")
+script = ExtResource("2_oonvq")
+
+[node name="bCookie" type="TextureButton" parent="."]
+visible = false
+offset_right = 40.0
+offset_bottom = 40.0
+focus_mode = 0
+texture_normal = ExtResource("1_fwyks")
+texture_hover = ExtResource("2_3mk64")
+script = ExtResource("5_vc3jv")
+
+[node name="bCookieUnmute" type="TextureButton" parent="."]
+visible = false
+offset_right = 40.0
+offset_bottom = 40.0
+texture_normal = ExtResource("3_4xqum")
+texture_hover = ExtResource("4_l8bh2")
+script = ExtResource("8_nbw01")
+
+[connection signal="mouse_entered" from="bCookie" to="clicksounds" method="_on_b_cookie_mouse_entered"]
+[connection signal="pressed" from="bCookie" to="bCookie" method="_on_pressed"]
+[connection signal="toggled" from="bCookie" to="bCookie" method="_on_toggled"]
+[connection signal="pressed" from="bCookieUnmute" to="bCookieUnmute" method="_on_pressed"]

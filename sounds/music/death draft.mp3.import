@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bxtkl5xrt2ayt"
+path="res://.godot/imported/death draft.mp3-a2589d7e47d613e12171a887934f265b.mp3str"
+
+[deps]
+
+source_file="res://sounds/music/death draft.mp3"
+dest_files=["res://.godot/imported/death draft.mp3-a2589d7e47d613e12171a887934f265b.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

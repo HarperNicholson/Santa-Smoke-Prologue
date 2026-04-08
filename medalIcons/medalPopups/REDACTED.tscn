@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://c7jt81n7p8qf3"]
+
+[ext_resource type="PackedScene" uid="uid://dqjmxyn1jtexc" path="res://medalIcons/achievementGet.tscn" id="1_ok4la"]
+
+[node name="AchievementGet" unique_id=1709264143 instance=ExtResource("1_ok4la")]
+medalDisplayName = "REDACTED"
+medalIconPath = "res://medalIcons/redacted.JPG"

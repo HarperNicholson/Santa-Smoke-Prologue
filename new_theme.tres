@@ -1,0 +1,42 @@
+[gd_resource type="Theme" load_steps=9 format=3 uid="uid://bgdd5vu881v6h"]
+
+[ext_resource type="FontFile" uid="uid://bwyjm1irjlrub" path="res://Test Handwritten.otf" id="1_g8t7c"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pa7jb"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hjrww"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_oifev"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dlkqb"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_w0tt2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5tmq6"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_phcmp"]
+
+[resource]
+default_font = ExtResource("1_g8t7c")
+Button/colors/font_color = Color(0.341176, 0.341176, 0.341176, 1)
+Button/colors/font_disabled_color = Color(0, 0, 0, 1)
+Button/colors/font_outline_color = Color(1, 1, 1, 1)
+Button/constants/h_separation = 0
+Button/constants/outline_size = 6
+Button/font_sizes/font_size = 33
+Button/fonts/font = ExtResource("1_g8t7c")
+Button/styles/disabled = SubResource("StyleBoxEmpty_pa7jb")
+Button/styles/focus = SubResource("StyleBoxEmpty_hjrww")
+Button/styles/hover = SubResource("StyleBoxEmpty_oifev")
+Button/styles/normal = SubResource("StyleBoxEmpty_dlkqb")
+Button/styles/pressed = SubResource("StyleBoxEmpty_w0tt2")
+RichTextLabel/colors/default_color = Color(0, 0, 0, 1)
+RichTextLabel/colors/font_shadow_color = Color(0, 0, 0, 0.258824)
+RichTextLabel/constants/shadow_offset_x = 3
+RichTextLabel/constants/shadow_offset_y = 3
+RichTextLabel/constants/shadow_outline_size = 4
+RichTextLabel/font_sizes/normal_font_size = 60
+RichTextLabel/fonts/mono_font = ExtResource("1_g8t7c")
+RichTextLabel/fonts/normal_font = ExtResource("1_g8t7c")
+RichTextLabel/styles/focus = SubResource("StyleBoxEmpty_5tmq6")
+RichTextLabel/styles/normal = SubResource("StyleBoxEmpty_phcmp")

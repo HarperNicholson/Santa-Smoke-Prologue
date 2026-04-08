@@ -1,0 +1,127 @@
+[gd_scene format=3 uid="uid://l2dhlex522ds"]
+
+[ext_resource type="Script" uid="uid://b7ppb3h1e3snq" path="res://menus/lostInSpaceLayer.gd" id="1_1fgr4"]
+[ext_resource type="Texture2D" uid="uid://b6xwgbdvk8lg4" path="res://menus/pause/pixel.png" id="5_jxskx"]
+[ext_resource type="FontFile" uid="uid://bwyjm1irjlrub" path="res://Test Handwritten.otf" id="6_6po4n"]
+[ext_resource type="PackedScene" uid="uid://s5he1oo2khwo" path="res://assets/background/bg_space.tscn" id="8_78sje"]
+[ext_resource type="Texture2D" uid="uid://bcpayodd8ytkw" path="res://assets/santa/santa animations/fall/santa_fall0004.png" id="8_hy7cp"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8ol3b"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xm5vv"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_o0a3y"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_aepk3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kjj0r"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tfnya"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jmvpp"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bx27k"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_roacg"]
+
+[node name="lostinspace_layer" type="CanvasLayer" unique_id=1463173793]
+process_mode = 3
+layer = 101
+script = ExtResource("1_1fgr4")
+
+[node name="pauseLayerAudio" type="AudioStreamPlayer" parent="." unique_id=1273257334]
+
+[node name="dimoverlay" type="Sprite2D" parent="." unique_id=1722230162]
+visible = false
+modulate = Color(0, 0, 0, 0.4)
+position = Vector2(639.875, 360)
+scale = Vector2(1280.25, 720)
+texture = ExtResource("5_jxskx")
+metadata/_edit_lock_ = true
+
+[node name="PausedLabel" type="RichTextLabel" parent="." unique_id=621231916]
+anchors_preset = -1
+anchor_left = -0.0679687
+anchor_right = 0.239063
+anchor_bottom = 0.218056
+offset_left = 385.0
+offset_top = 139.0
+offset_right = 695.0
+offset_bottom = 219.0
+theme_override_colors/default_color = Color(0.137255, 0.34902, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.2484, 0.2484, 0.2484, 1)
+theme_override_constants/shadow_outline_size = 4
+theme_override_constants/shadow_offset_y = 5
+theme_override_fonts/normal_font = ExtResource("6_6po4n")
+theme_override_font_sizes/normal_font_size = 60
+bbcode_enabled = true
+text = "[center]YOU    ARE    
+FLOATING    
+IN    ETERNITY[/center]"
+metadata/_edit_use_anchors_ = true
+
+[node name="bRestart" type="Button" parent="." unique_id=1254873466]
+offset_left = 544.0
+offset_top = 408.0
+offset_right = 774.0
+offset_bottom = 464.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(0.701961, 0.803922, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_constants/h_separation = 0
+theme_override_fonts/font = ExtResource("6_6po4n")
+theme_override_font_sizes/font_size = 33
+theme_override_styles/normal = SubResource("StyleBoxEmpty_8ol3b")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_xm5vv")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_o0a3y")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_aepk3")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_kjj0r")
+text = "RESTART"
+metadata/_edit_use_anchors_ = true
+metadata/_edit_lock_ = true
+
+[node name="bQuit" type="Button" parent="." unique_id=854444640]
+offset_left = 544.0
+offset_top = 488.0
+offset_right = 774.0
+offset_bottom = 544.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(0.701961, 0.803922, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("6_6po4n")
+theme_override_font_sizes/font_size = 33
+theme_override_styles/normal = SubResource("StyleBoxEmpty_8ol3b")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_tfnya")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_jmvpp")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_bx27k")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_roacg")
+text = "QUIT
+"
+metadata/_edit_use_anchors_ = true
+metadata/_edit_lock_ = true
+
+[node name="Timer" type="Timer" parent="." unique_id=1140226109]
+wait_time = 1.1
+
+[node name="RestartTimer" type="Timer" parent="." unique_id=596187254]
+wait_time = 1.1
+
+[node name="bg_space" parent="." unique_id=824986980 instance=ExtResource("8_78sje")]
+
+[node name="ROTATETIMER" type="Timer" parent="." unique_id=583217576]
+autostart = true
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1485126041]
+z_index = -2
+position = Vector2(308, 407)
+texture = ExtResource("8_hy7cp")
+
+[connection signal="mouse_entered" from="bRestart" to="." method="_on_b_restart_mouse_entered"]
+[connection signal="pressed" from="bRestart" to="." method="_on_b_restart_pressed"]
+[connection signal="mouse_entered" from="bQuit" to="." method="_on_b_quit_mouse_entered"]
+[connection signal="pressed" from="bQuit" to="." method="_on_b_quit_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="RestartTimer" to="." method="_on_restart_timer_timeout"]
+[connection signal="timeout" from="ROTATETIMER" to="." method="_on_rotatetimer_timeout"]
